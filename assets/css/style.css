@@ -3,8 +3,31 @@
 /*------ Header------*/
 
 #main-logo{
-    font-size: 225%;
+    font-size: 48px;
     padding-left: 20px;
     margin-top: 20px;
     text-decoration: none;
+}
+
+.introduction{
+    padding-top: 40px;
+    font-style: italic;
+    font-family:'Merriweather Sans', sans-serif; 
+    font-size: 20px;
+    color: black;
+}
+
+.launch-position{
+    padding: 20px 40% 0 35%;
+}
+
+#launch-questions{
+    text-transform: capitalize;
+    width: fit-content;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    background-color: blueviolet;
+    color: yellow;
 }
