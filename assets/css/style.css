@@ -9,6 +9,8 @@
     text-decoration: none;
 }
 
+/*------- Welcome Section----------*/
+
 .introduction{
     padding-top: 40px;
     font-style: italic;
@@ -31,3 +33,19 @@
     background-color: blueviolet;
     color: yellow;
 }
+
+#picture-generation-field{
+    padding: 70px 40% 0 35%;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 200%;
+}
+
+/*----------Post Button Click------*/
+
+.left-image{
+    left: 10px;
+}
+
+.right-image{
+    right: 10px;
+}    
