@@ -7,7 +7,7 @@ let pictureGenerationField = document.getElementsByClassName(picture-generation-
 function startQuiz (event) {
     let button = document.getElementsByTagName("button")[0] 
     button.remove();
-    $("#picture-generation-field").html("<h2>Beach or Mountains?</h2>");
+    $("#picture-generation-field").html("<p>Beach or Mountains?</p>").addClass("test");
     /*let launchQuestions = document.getElementById('launch-questions');
     launchQuestions.innerHTML += "Mountains or Beaches?";
     let newHeading = document.createElement("h3");

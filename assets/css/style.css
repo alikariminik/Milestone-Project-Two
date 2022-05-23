@@ -20,7 +20,7 @@
 }
 
 .launch-positioning{
-    padding: 20px 40% 0 35%;
+    padding: 20px 36.5% 20px 36.5%;
 }
 
 #launch-questions{
@@ -35,9 +35,16 @@
 }
 
 #picture-generation-field{
-    padding: 70px 40% 0 35%;
+    padding: 35px 37.5% 35px 37.5%;
     font-family: 'Merriweather Sans', sans-serif;
-    font-size: 200%;
+}
+
+.test{
+    background-color: blueviolet;
+    color: yellow;
+    font-size: 30px;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
 }
 
 /*----------Post Button Click------*/
