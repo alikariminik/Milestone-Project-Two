@@ -5,13 +5,18 @@ let questionGenerationField = document.getElementsByClassName(question-generatio
 
 
 function startQuiz (event) {
-    let button = document.getElementsByTagName("button")[0] 
-    button.remove();
     let intro = document.getElementsByClassName("introduction")[0] 
     intro.remove();
+    let button = document.getElementsByTagName("button")[0] 
+    button.remove();
     $("#question-generation-field").html("<p>Beach or Mountains?</p>").addClass("test");
     /*let launchQuestions = document.getElementById('launch-questions');
     launchQuestions.innerHTML += "Mountains or Beaches?";
     let newHeading = document.createElement("h3");
     div[1].appendChild(newHeading);*/
 }
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.unsplash.com/")
+xhr.send();
+
