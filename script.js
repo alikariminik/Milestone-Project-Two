@@ -12,6 +12,7 @@ function startQuiz (event) {
     let button = document.getElementsByTagName("button")[0] 
     button.remove();
     $("#question-generation-field").html("<p>Beaches or Mountains?</p>").addClass("test");
+    $("#iw").addClass("images-wrapper");
     $("#op-a").addClass("left-image-wrapper");
     $("#op-b").addClass("right-image-wrapper");
     /*let launchQuestions = document.getElementById('launch-questions');
