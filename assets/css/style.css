@@ -1,8 +1,6 @@
-
-
 /*------ Header------*/
 
-#main-logo{
+#main-logo {
     font-size: 48px;
     padding-left: 20px;
     margin-top: 20px;
@@ -11,19 +9,19 @@
 
 /*------- Welcome Section----------*/
 
-.introduction{
+.introduction {
     padding-top: 40px;
     font-style: italic;
-    font-family:'Merriweather Sans', sans-serif; 
+    font-family: 'Merriweather Sans', sans-serif;
     font-size: 20px;
     color: black;
 }
 
-.launch-positioning{
+.launch-positioning {
     padding: 20px 36.5% 20px 36.5%;
 }
 
-#launch-questions{
+#launch-questions {
     text-transform: capitalize;
     width: fit-content;
     letter-spacing: 1px;
@@ -35,11 +33,16 @@
     text-align: center;
 }
 
-#question-generation-field{
+#launch-questions:hover {
+    background-color: yellow;
+    color: blueviolet;
+}
+
+#question-generation-field {
     padding: 20px 30.5% 20px 30.5%;
 }
 
-.test{
+.test {
     background-color: blueviolet;
     color: yellow;
     font-size: 30px;
@@ -50,18 +53,26 @@
 
 /*----------Post Button Click------*/
 
-.image-field{
-    display: inline-block;
+.images-wrapper{
+    height: 800px;
 }
 
-.left-image-wrapper{
+.left-image-wrapper {
     border-color: black;
     background-color: red;
     justify-content: flex-start;
+    background: url("http://cdn.cnn.com/cnnnext/dam/assets/181010131059-australia-best-beaches-cossies-beach-cocos3.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
-.right-image-wrapper{
+.right-image-wrapper {
     border-color: black;
     background-color: blue;
     justify-content: flex-end;
-}    
+    background: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}

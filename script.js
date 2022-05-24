@@ -7,6 +7,8 @@ let questionGenerationField = document.getElementsByClassName(question-generatio
 function startQuiz (event) {
     let intro = document.getElementsByClassName("introduction")[0] 
     intro.remove();
+    /*let wastefulRealEstate = document.getElementsByClassName("launch-positioning")[0]
+    wastefulRealEstate.remove(); */
     let button = document.getElementsByTagName("button")[0] 
     button.remove();
     $("#question-generation-field").html("<p>Beach or Mountains?</p>").addClass("test");
