@@ -18,7 +18,8 @@
 }
 
 .launch-positioning {
-    padding: 20px 36.5% 20px 36.5%;
+    display: flex;
+    justify-content: center;
 }
 
 #launch-questions {
