@@ -22,6 +22,10 @@ function startQuiz (event) {
     div[1].appendChild(newHeading);*/
 }
 
+function startAgain (event) {
+    
+}
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://api.unsplash.com/")
 xhr.send();
