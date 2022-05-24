@@ -11,10 +11,11 @@ function startQuiz (event) {
     wastefulRealEstate.remove(); */
     let button = document.getElementsByTagName("button")[0] 
     button.remove();
-    $("#question-generation-field").html("<p>Beaches or Mountains?</p>").addClass("test");
+    $("#question-generation-field").html("<p>beaches or mountains?</p>").addClass("test");
     $("#iw").addClass("images-wrapper");
     $("#op-a").addClass("left-image-wrapper");
     $("#op-b").addClass("right-image-wrapper");
+    $("#reset-button").html("<button>start again</button>").addClass("reset-button-style");
     /*let launchQuestions = document.getElementById('launch-questions');
     launchQuestions.innerHTML += "Mountains or Beaches?";
     let newHeading = document.createElement("h3");
