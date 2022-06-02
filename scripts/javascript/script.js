@@ -14,7 +14,7 @@ const OPTIONS = [
 let launchQuestions = document.getElementById('launch-questions');
 launchQuestions.addEventListener('click', startQuiz);
 
-function updateElementWithRandomPhotos() {
+function updateElementWithRandomPhotos(searchTerm, elementId) {
     const url = `https://api.unsplash.com/photos/random?query=${searchTerm}*orientation=squarish&client-id=${UNSPLASH_API_KEY}`;
 
     fetch(url)
@@ -25,12 +25,12 @@ function updateElementWithRandomPhotos() {
     .catch((err) => console.error("error getting image"));
 }
 
-function updateOptionPhotos() {
+function updateOptionPhotos(index) {
     updateElementWithRandomPhotos(OPTIONS[index].a, OPTION_A_ID);
     updateElementWithRandomPhotos(OPTIONS[index].b, OPTION_B_ID);
 }
 
-function initialiseImages() {
+function initialiseImages(option, index) {
     let optionAImage = document.getElementById(OPTION_A_ID);
     let optionBImage = document.getElementById(OPTION_B_ID);
 
