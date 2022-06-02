@@ -14,6 +14,15 @@ const OPTIONS = [
 let launchQuestions = document.getElementById('launch-questions');
 launchQuestions.addEventListener('click', startQuiz);
 
+function updateElementWithRandomPhotos() {
+    const url = `https://api.unsplash.com/photos/random?query=${searchTerm}*orientation=squarish&client-id=${UNSPLASH_API_KEY}`;
+}
+
+function updateOptionPhotos() {
+    updateElementWithRandomPhotos(OPTIONS[index].a, OPTION_A_ID);
+    updateElementWithRandomPhotos(OPTIONS[index].b, OPTION_B_ID);
+}
+
 function startAgain (event) {
     
 }
