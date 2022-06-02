@@ -1,5 +1,25 @@
 {
   "dependencies": {
     "unsplash-js": "^7.0.15"
+  },
+  "name": "milestone-project-two",
+  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alikariminik/Milestone-Project-Two.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alikariminik/Milestone-Project-Two/issues"
+  },
+  "homepage": "https://github.com/alikariminik/Milestone-Project-Two#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
   }
 }
