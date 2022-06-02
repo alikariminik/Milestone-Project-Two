@@ -95,9 +95,7 @@
 
 .left-image-wrapper {
     border-color: black;
-    background-color: red;
     justify-content: flex-start;
-    background: url("http://cdn.cnn.com/cnnnext/dam/assets/181010131059-australia-best-beaches-cossies-beach-cocos3.jpg") no-repeat center;
     background-size: cover;
     height: 100%;
     width: 100%;
@@ -105,9 +103,7 @@
 
 .right-image-wrapper {
     border-color: black;
-    background-color: blue;
     justify-content: flex-end;
-    background: url("https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg") no-repeat center;
     background-size: cover;
     height: 100%;
     width: 100%;
