@@ -30,7 +30,22 @@ function updateOptionPhotos() {
     updateElementWithRandomPhotos(OPTIONS[index].b, OPTION_B_ID);
 }
 
+function initialiseImages() {
+    let optionAImage = document.getElementById(OPTION_A_ID);
+    let optionBImage = document.getElementById(OPTION_B_ID);
 
+    updateOptionPhotos(index);
+
+    optionAImage.addEventListener("click", () => {
+        handleImageClick(OPTIONS[index].a, index);
+        index = index + 1;
+    })
+
+    optionBImage.addEventListener("click", () => {
+        handleImageClick(OPTIONS[index].b, index);
+        index = index + 1;
+    })
+}
 
 function startAgain (event) {
     
