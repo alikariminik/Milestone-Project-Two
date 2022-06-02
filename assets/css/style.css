@@ -55,6 +55,22 @@
     text-align: center;
 }
 
+/*----------Image Container------*/
+.image-container{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option-image{
+    width:500px;
+    height:400px;
+}
+
+.hidden{
+    display: none;
+}
 /*----------Post Button Click------*/
 
 .reset-button {
@@ -69,13 +85,13 @@
     text-align: center;
 }
 
-.options{
+/*.options{
     height:800px;
 }
 
 .options div{
     height: 700px;
-}
+}*/
 
 .left-image-wrapper {
     border-color: black;
