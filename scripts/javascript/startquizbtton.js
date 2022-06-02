@@ -3,10 +3,18 @@
 
 
 function startQuiz (event) {
+    let answers = []
+    let index = 0
+
+    initialiseImages(index);
+    
     const intro = document.getElementsByClassName("introduction")[0] 
     intro.remove();
     const button = document.getElementsByTagName("button")[0]
     button.remove();
+    document.getElementsByTagName("img").removeClass("hidden");
+    
+
     document.getElementById("question-generation-field").innerHTML = `<p class="test">Beaches or Mountains?</p>`
     $("#iw").addClass("images-wrapper");
     $("#op-a").addClass("left-image-wrapper");
