@@ -14,8 +14,8 @@ const OPTIONS = [
 let launchQuestions = document.getElementById('launch-questions');
 launchQuestions.addEventListener('click', startQuiz);
 
-function updateElementWithRandomPhotos(searchTerm, elementId) {
-    const url = `https://api.unsplash.com/photos/random?query=${searchTerm}*orientation=squarish&client-id=${UNSPLASH_API_KEY}`;
+function updateElementWithRandomPhoto(searchTerm, elementId) {
+    const url = `https://api.unsplash.com/photos/random?query=${searchTerm}&orientation=squarish&client_id=${UNSPLASH_API_KEY}`;
 
     fetch(url)
     .then((response) => response.json())
@@ -26,11 +26,16 @@ function updateElementWithRandomPhotos(searchTerm, elementId) {
 }
 
 function updateOptionPhotos(index) {
-    updateElementWithRandomPhotos(OPTIONS[index].a, OPTION_A_ID);
-    updateElementWithRandomPhotos(OPTIONS[index].b, OPTION_B_ID);
+    updateElementWithRandomPhoto(OPTIONS[index].a, OPTION_A_ID);
+    updateElementWithRandomPhoto(OPTIONS[index].b, OPTION_B_ID);
 }
 
-function initialiseImages(option, index) {
+function handleImageClick(option, index){
+    console.log(option, index);
+    updateOptionPhotos(index + 1);
+}
+
+function initialiseImages(index) {
     let optionAImage = document.getElementById(OPTION_A_ID);
     let optionBImage = document.getElementById(OPTION_B_ID);
 
@@ -46,6 +51,8 @@ function initialiseImages(option, index) {
         index = index + 1;
     })
 }
+
+
 
 function startAgain (event) {
     

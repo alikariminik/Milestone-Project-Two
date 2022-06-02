@@ -12,8 +12,10 @@ function startQuiz (event) {
     intro.remove();
     const button = document.getElementsByTagName("button")[0]
     button.remove();
-    document.getElementsByTagName("img").removeClass("hidden");
+    $("img").removeClass("hidden");
     
+    updateElementWithRandomPhoto("beaches", OPTION_A_ID, index + 1);
+    updateElementWithRandomPhoto("mountain range", OPTION_B_ID, index + 1);
 
     document.getElementById("question-generation-field").innerHTML = `<p class="test">Beaches or Mountains?</p>`
     $("#iw").addClass("images-wrapper");

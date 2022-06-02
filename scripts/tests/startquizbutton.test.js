@@ -1,5 +1,5 @@
 const { expect } = require("@jest/globals");
-const startQuiz = require("../javascript/startquizbtton")
+const startQuiz = require("../javascript/startquizbutton")
 
 beforeEach( () => {
     let fs = require("fs");
