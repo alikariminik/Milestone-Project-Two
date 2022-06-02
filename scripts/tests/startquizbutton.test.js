@@ -20,8 +20,12 @@ describe("DOM tests on button click which call startQuiz function", () => {
     });
     test("expects insert of a question at at div with ID of question-generation-field", () => {
         startQuiz();
-        expect(document.getElementById("question-generation-field").innerHTML).toEqual(`<p class="test">Beaches or Mountains?</p>`)
+        expect(document.getElementById("question-generation-field").innerHTML).toEqual(`<p class="test">Beaches or Mountains?</p>` )
     });
+    test("expects class='hidden' to be removed from the <img>", () => {
+        startQuiz();
+        expect(document.getElementsByClassName("hidden").remove())
+});
 });
 
 /*describe("DOM tests on button click which call startQuiz function", () => {
