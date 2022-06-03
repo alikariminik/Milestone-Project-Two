@@ -1,5 +1,6 @@
 const { expect } = require("@jest/globals");
 const startQuiz = require("../javascript/startquizbutton")
+let $ = document.getElementById;
 
 beforeEach( () => {
     let fs = require("fs");
@@ -24,8 +25,20 @@ describe("DOM tests on button click which call startQuiz function", () => {
     });
     test("expects class='hidden' to be removed from the <img>", () => {
         startQuiz();
-        expect(document.getElementsByClassName("hidden").remove())
-});
+        expect(document.getElementsByClassName("hidden").length).toBe(0);
+    });
+    test("expects class='hidden' to be removed from the <img>", () => {
+        startQuiz();
+        expect(document.getElementsByClassName("hidden").length).toBe(0);
+    });
+    test("expects class='hidden' to be removed from the <img>", () => {
+        startQuiz();
+        expect(document.getElementsByClassName("hidden").length).toBe(0);
+    });
+    test("expects class='hidden' to be removed from the <img>", () => {
+        startQuiz();
+        expect(document.getElementsByClassName("hidden").length).toBe(0);
+    });
 });
 
 /*describe("DOM tests on button click which call startQuiz function", () => {

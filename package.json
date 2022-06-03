@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jquery": "^3.6.0",
     "unsplash-js": "^7.0.15"
   },
   "name": "milestone-project-two",
@@ -21,5 +22,10 @@
   "homepage": "https://github.com/alikariminik/Milestone-Project-Two#readme",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "jest": {
+    "setupFiles": [
+      "./scripts/tests/set-up.jest.js"
+    ]
   }
 }

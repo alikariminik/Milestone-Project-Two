@@ -6,7 +6,7 @@ function startQuiz (event) {
     let answers = [];
     let index = 0;
 
-    initialiseImages(index);
+    //initialiseImages(index);
     
     const intro = document.getElementsByClassName("introduction")[0] 
     intro.remove();
@@ -15,18 +15,18 @@ function startQuiz (event) {
     $("img").removeClass("hidden");
 
     
-    updateElementWithRandomPhoto("beaches", OPTION_A_ID, index + 1);
-    updateElementWithRandomPhoto("mountain range", OPTION_B_ID, index + 1);
+    // updateElementWithRandomPhoto("beaches", OPTION_A_ID, index + 1);
+    // updateElementWithRandomPhoto("mountain range", OPTION_B_ID, index + 1);
 
     document.getElementById("question-generation-field").innerHTML = `<p class="test">Beaches or Mountains?</p>`;
-    $("#iw").addClass("images-wrapper");
-    $("#op-a").addClass("left-image-wrapper");
-    $("#op-b").addClass("right-image-wrapper");
-    $("#back-button").html("<button class='back-button'>back to last question <i class='fa-solid fa-arrow-left'></i> </button>");
-    document.getElementById("back-button").addEventListener("click", previousQuestion);
+    // $("#iw").addClass("images-wrapper");
+    // $("#op-a").addClass("left-image-wrapper");
+    // $("#op-b").addClass("right-image-wrapper");
+    // $("#back-button").html("<button class='back-button'>back to last question <i class='fa-solid fa-arrow-left'></i> </button>");
+    // document.getElementById("back-button").addEventListener("click", previousQuestion);
 
-    $("#reset-button").html("<button class='reset-button'>start again <i class='fa-solid fa-arrow-rotate-right'></i> </button>");
-    document.getElementById("reset-button").addEventListener("click", resetQuestions);    
+    // $("#reset-button").html("<button class='reset-button'>start again <i class='fa-solid fa-arrow-rotate-right'></i> </button>");
+    // document.getElementById("reset-button").addEventListener("click", resetQuestions);   
 }
 
 function resetQuestions (event) {
@@ -51,4 +51,3 @@ function previousQuestion (event) {
 module.exports = startQuiz;
 
 //$("#question-generation-field").html("<p class='test'>Beaches or Mountains?</p>");
-  
