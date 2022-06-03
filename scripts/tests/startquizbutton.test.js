@@ -1,6 +1,6 @@
 const { expect } = require("@jest/globals");
 const startQuiz = require("../javascript/startquizbutton")
-let $ = document.getElementById;
+
 
 beforeEach( () => {
     let fs = require("fs");
@@ -10,14 +10,17 @@ beforeEach( () => {
     document.close();
 });
 
+const mockInitialiseImages = "mock";
+const mockUpdateElementWithRandomPhoto = "mock";
+
 describe("DOM tests on button click which call startQuiz function", () => {
     test("expects class=introduction to be removed from HTML", () => {
         startQuiz();
         expect(document.getElementsByClassName("introduction").length).toBe(0);
     });
-    test("expects startquiz button to be removed from HTML", () => {
+    test("expects startquiz button to be removed from HTML. Back Button and Reset Button should be added", () => {
         startQuiz();
-        expect(document.getElementsByTagName("button").length).toBe(0);
+        expect(document.getElementsByTagName("button").length).toBe(2);
     });
     test("expects insert of a question at at div with ID of question-generation-field", () => {
         startQuiz();
@@ -27,17 +30,25 @@ describe("DOM tests on button click which call startQuiz function", () => {
         startQuiz();
         expect(document.getElementsByClassName("hidden").length).toBe(0);
     });
-    test("expects class='hidden' to be removed from the <img>", () => {
+    test("expects class='images-wrapper' to be added", () => {
         startQuiz();
-        expect(document.getElementsByClassName("hidden").length).toBe(0);
+        expect(document.getElementsByClassName("images-wrapper").length).toBe(1);
     });
-    test("expects class='hidden' to be removed from the <img>", () => {
+    test("expects class='left-image-wrapper' to be added", () => {
         startQuiz();
-        expect(document.getElementsByClassName("hidden").length).toBe(0);
+        expect(document.getElementsByClassName("left-image-wrapper").length).toBe(1);
     });
-    test("expects class='hidden' to be removed from the <img>", () => {
+    test("expects class='right-image-wrapper' to be added", () => {
         startQuiz();
-        expect(document.getElementsByClassName("hidden").length).toBe(0);
+        expect(document.getElementsByClassName("right-image-wrapper").length).toBe(1);
+    });
+    test("expects class='back-button' to be added", () => {
+        startQuiz();
+        expect(document.getElementsByClassName("back-button").length).toBe(1);
+    });
+    test("expects class='reset-button' to be added", () => {
+        startQuiz();
+        expect(document.getElementsByClassName("reset-button").length).toBe(1);
     });
 });
 
