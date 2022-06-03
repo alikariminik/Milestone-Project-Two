@@ -1,5 +1,6 @@
 const { expect } = require("@jest/globals");
 const startQuiz = require("../javascript/startquizbutton")
+const initialiseImages = require("../javascript/script.js")
 
 
 beforeEach( () => {
@@ -10,10 +11,14 @@ beforeEach( () => {
     document.close();
 });
 
-const mockInitialiseImages = "mock";
-const mockUpdateElementWithRandomPhoto = "mock";
+
 
 describe("DOM tests on button click which call startQuiz function", () => {
+    test("expects initialiseImages to be called correctly", () => {
+        const mockInitialiseImages = jest.fn(initialiseImages);
+        startQuiz();
+        expect(mockInitialiseImages.mock.calls.length).toBe(1);
+    });
     test("expects class=introduction to be removed from HTML", () => {
         startQuiz();
         expect(document.getElementsByClassName("introduction").length).toBe(0);

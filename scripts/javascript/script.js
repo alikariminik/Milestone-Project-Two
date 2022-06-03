@@ -3,26 +3,43 @@ const UNSPLASH_API_KEY = "Gu2n4WYUlx5onlhkP2AvCODE2KHAO7eNX2noQdq2Tk0";
 const OPTION_A_ID = "optionA";
 const OPTION_B_ID = "optionB";
 
-const OPTIONS = [
-    {a: "beach", b: "mountain range"},
-    {a: "city", b: "rural"},
-    {a: "adventure", b: "relaxation"},
-    {a: "history", b: "nightlight"},
-    {a: "culture", b: "nature"},
+const OPTIONS = [{
+        a: "beach",
+        b: "mountain range"
+    },
+    {
+        a: "city",
+        b: "rural"
+    },
+    {
+        a: "adventure",
+        b: "relaxation"
+    },
+    {
+        a: "history",
+        b: "nightlight"
+    },
+    {
+        a: "culture",
+        b: "nature"
+    },
 ]
 
-let launchQuestions = document.getElementById('launch-questions');
-launchQuestions.addEventListener('click', startQuiz);
+window.onload = function () {
+    let launchQuestions = document.getElementById('launch-questions');
+    launchQuestions.addEventListener('click', startQuiz);
+}
+
 
 function updateElementWithRandomPhoto(searchTerm, elementId) {
     const url = `https://api.unsplash.com/photos/random?query=${searchTerm}&orientation=squarish&client_id=${UNSPLASH_API_KEY}`;
 
     fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-        document.getElementById(elementId).src = data.urls.regular;
-    })
-    .catch((err) => console.error("error getting image"));
+        .then((response) => response.json())
+        .then((data) => {
+            document.getElementById(elementId).src = data.urls.regular;
+        })
+        .catch((err) => console.error("error getting image"));
 }
 
 function updateOptionPhotos(index) {
@@ -30,7 +47,7 @@ function updateOptionPhotos(index) {
     updateElementWithRandomPhoto(OPTIONS[index].b, OPTION_B_ID);
 }
 
-function handleImageClick(option, index){
+function handleImageClick(option, index) {
     console.log(option, index);
     updateOptionPhotos(index + 1);
 }
@@ -54,7 +71,8 @@ function initialiseImages(index) {
 
 
 
-function startAgain (event) {
-    
+function startAgain(event) {
+
 }
 
+module.exports = initialiseImages;
