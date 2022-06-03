@@ -4,24 +4,24 @@ const OPTION_A_ID = "optionA";
 const OPTION_B_ID = "optionB";
 
 const OPTIONS = [{
-        a: "beach",
-        b: "mountain range"
+        a: { name: "beach", id: ["9357", "9937002"]}, //[Beach, Beach Club]
+        b: { name: "mountain range", id: ["7302002", "8099002", "9935", 9362026]}, //[Mountain Bike Trail, Mountain Peak, Mountain Pass, Ski Resort]
     },
     {
         a: "city",
         b: "rural"
     },
     {
-        a: "adventure",
-        b: "relaxation"
+        a: { name: "adventure", id: ["7305", "9371", "7302004", "9902003"]}, //[Adventure Sports Facility, Water Sport, Hiking Trail, Amusement Park]
+        b: { name: "relaxation", id: ["9378005", "7338"]}, // [Sauna, Solarium & Massage, Swimming Pool]
     },
     {
-        a: "history",
-        b: "nightlight"
+        a: {name: "history", id: ["7317"]}, //[Museum, ]
+        b: {name: "nightlight", id: []}, //
     },
     {
-        a: "culture",
-        b: "nature"
+        a: {name: "culture", id: ["7318005", ]} //[Theater,]
+        b: {name: "nature", id: ["9927003"]}, //[Zoo, ] 
     },
 ]
 

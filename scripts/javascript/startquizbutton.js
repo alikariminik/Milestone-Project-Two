@@ -22,12 +22,19 @@ function startQuiz (event) {
      $("#back-button").html("<button class='back-button'>back to last question <i class='fa-solid fa-arrow-left'></i> </button>");
      document.getElementById("back-button").addEventListener("click", previousQuestion);
 
+     let answerA = document.getElementById("optionA");
+     answerA.addEventListener("click", () => {
+       answers.push("optionA");
+       console.log(answers, answers.length);
+     });
+
      $("#reset-button").html("<button class='reset-button'>start again <i class='fa-solid fa-arrow-rotate-right'></i> </button>");
      document.getElementById("reset-button").addEventListener("click", resetQuestions);   
 }
 
 function resetQuestions (event) {
     let answers = [];
+    answers.length = 0
     let index = 0;
 
     initialiseImages(index);
@@ -40,9 +47,11 @@ function resetQuestions (event) {
 }
 
 function previousQuestion (event) {
-    let answers = []
-    answers.pop();
-    let index = -1
+    let answers = answers.pop();
+    let index = - 1;
+
+    updateElementWithRandomPhoto(OPTION_A_ID, index - 1);
+    updateElementWithRandomPhoto(OPTION_B_ID, index - 1);
 }
 
 module.exports = startQuiz;
