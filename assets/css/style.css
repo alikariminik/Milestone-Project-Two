@@ -21,7 +21,7 @@
 
 .button-positioning {
     display: flex;
-    justify-content: center;
+    justify-content:center;
 }
 
 
@@ -118,7 +118,7 @@
     height: 700px;
 }*/
 
-.left-image-wrapper {
+/* .left-image-wrapper {
     border-color: black;
     justify-content: flex-start;
     background-size: cover;
@@ -132,4 +132,4 @@
     background-size: cover;
     height: 100%;
     width: 100%;
-}
+} */

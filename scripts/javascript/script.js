@@ -2,6 +2,7 @@ const UNSPLASH_API_KEY = "Gu2n4WYUlx5onlhkP2AvCODE2KHAO7eNX2noQdq2Tk0";
 
 const OPTION_A_ID = "optionA";
 const OPTION_B_ID = "optionB";
+const backButton = document.getElementById("back-button");
 
 const OPTIONS = [{
         a: {
@@ -86,23 +87,27 @@ function addAnswer(isAnswerA) {
 }
 
 function handleOptionClick(isOptionA) {
-    if (index === OPTIONS.length - 1) {
-        handleFinalOption(isOptionA);
-    } else {
-        addAnswer(isOptionA);
-        index = index + 1;
-        updateOptionPhotos(index);
-        updateQuestionText(index, "question-generation-field");
-        $("#back-button").html(`<button" class="back-button"> back to last question <i class="fa-solid fa-arrow-left"></i></button>`)
-    }
+	if (index === OPTIONS.length - 1) {
+		handleFinalOption(isOptionA);
+	} else {
+		addAnswer(isOptionA);
+		index = index + 1;
+		updateOptionPhotos(index);
+    	updateQuestionText(index, "question-generation-field");
+		$("#back-button").html("<button class='back-button'>back to last question <i class='fa-solid fa-arrow-left'></i> </button>");
+	}
 }
 
 
 function handleFinalOption(isAnswerA) {
-    addAnswer(isAnswerA);
-    let quiz = document.getElementById("quiz");
-    quiz.classList.add("hidden");
+	addAnswer(isAnswerA);
+	let quiz = document.getElementById('quiz');
+	quiz.classList.add('hidden');
+    backButton.classList.add("hidden");
+
+	getDestination(getIdsForRequest(answers));
 }
+
 
 function initialiseImages() {
     let optionAImage = document.getElementById(OPTION_A_ID);
@@ -115,7 +120,4 @@ function initialiseImages() {
     optionBImage.addEventListener("click", () => handleOptionClick(true));
 }
 
-module.exports = {
-    OPTIONS,
-    initialiseImages
-};
+module.exports = {OPTIONS, initialiseImages};
