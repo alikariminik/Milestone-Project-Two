@@ -43,6 +43,16 @@ function updateOptionPhotos(index) {
     updateElementWithRandomPhoto(OPTIONS[index].searchQuery, OPTION_B_ID);
 }
 
+function updateQuestionText(index, id) {
+    let nameA = OPTIONS[index].a.name;
+    let nameB = OPTIONS[index].b.name;
+    document.getElementById(id).innerHTML = `<p class="quiz-question">${nameA} or ${nameB}</p>`;
+}
+
+function addAnswer(isAnswerA) {
+    isAnswerA ? answers.push(OPTIONS[index].a) : answers.push(OPTIONS[index].b);
+}
+
 function handleImageClick(option, index) {
     console.log(option, index);
     updateOptionPhotos(index + 1);
