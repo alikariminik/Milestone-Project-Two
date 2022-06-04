@@ -36,9 +36,8 @@ function removeIntroductionText () {
 }
 
 function resetQuestions (event) {
-    let answers = [];
-    answers.length = 0
-    let index = 0;
+    answers = [];
+    index = 0;
 
     initialiseImages(index);
 
