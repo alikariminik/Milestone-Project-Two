@@ -8,8 +8,9 @@ function getIdsForRequest(answers) {
 }
 
 function getDestination(ids) {
-    const tenIds = ids.sort(() => .5 - math.random()).slice(0,9); // API can only have 10 ids so need to sort
-    const url = `https://api.tomtom.com/search/2/categorySearch/places.json?key=${TOMTOM_API_KEY}&limit=50&categorySet=${tenIds.join(",")}`;
+    const tenIds = ids.sort(() => .5 - Math.random()).slice(0,9); // API can only have 10 ids so need to sort
+    const tenCountryCodes = countryCodes.sort(() => .5 - Math.random()).slice(0,9);
+    const url = `https://api.tomtom.com/search/2/categorySearch/places.json?key=${TOMTOM_API_KEY}&limit=100&ofs=1900&rcategorySet=${tenIds.join}countrySet=${tenCountryCodes.join(",")}`;
 
     fetch(url)
     .then((response) => response.json())

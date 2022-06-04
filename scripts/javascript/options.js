@@ -7,12 +7,12 @@ const backButton = document.getElementById("back-button");
 const OPTIONS = [{
         a: {
             name: "Beaches",
-            searchQuery: "Turks and Caicos",
+            searchQuery: "Sea Beach",
             id: ["9357", "9937002"]
         }, //[Beach, Beach Club]
         b: {
             name: "Mountain Range",
-            searchQuery: "Mount Everest",
+            searchQuery: "Everest",
             id: ["7302002", "8099002", "9935", "9362026"]
         }, //[Mountain Bike Trail, Mountain Peak, Mountain Pass, Ski Resort]
     },
@@ -31,7 +31,7 @@ const OPTIONS = [{
     {
         a: {
             name: "Historical",
-            searchQuery: "Houses of Parliament",
+            searchQuery: "Big Ben",
             id: ["7317", "7376003", "9362007", "9362004", "9362002"]
         }, //[Museum, Monument, Memorial, Historic Site, Battlefield ]
         b: {
@@ -96,7 +96,7 @@ function handleOptionClick(isOptionA) {
 		updateOptionPhotos(index);
     	updateQuestionText(index, "question-generation-field");
 }
-
+}
 
 function handleFinalOption(isAnswerA) {
 	addAnswer(isAnswerA);
@@ -119,4 +119,4 @@ function initialiseImages() {
     optionBImage.addEventListener("click", () => handleOptionClick(true));
 }
 
-module.exports = {OPTIONS, initialiseImages};
+module.exports = {OPTIONS, initialiseImages}

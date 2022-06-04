@@ -23,18 +23,18 @@ function reloadPage () {
     document.location.reload();
 }
 
-function previousQuestion () {
-    answers.pop();
-    index = index - 1;
+// function previousQuestion () {
+//     answers.pop();
+//     index = index - 1;
 
-    updateOptionPhotos(index);
-    updateQuestionText(index, "question-generation-field")
+//     updateOptionPhotos(index);
+//     updateQuestionText(index, "question-generation-field")
     // if (index === 0){
     //     document.getElementById("back-button").classList.add("hidden");
     //  } else if (index === 1 ) {
     //     document.getElementById("back-button").classList.remove("hidden");
     //  }
-}
+// }
 
 module.exports = startQuiz;
 
