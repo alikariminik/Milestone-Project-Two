@@ -18,31 +18,31 @@ function startQuiz () {
      document.getElementById("back-button").addEventListener("click", previousQuestion);
 
      $("#reset-button").html("<button class='reset-button'>start again <i class='fa-solid fa-arrow-rotate-right'></i> </button>");
-     document.getElementById("reset-button").addEventListener("click", reloadPage);   
+     document.getElementById("reset-button").addEventListener("click", "resetQuestions")
 }
 
-function reloadPage() {
-    sessionStorage.setItem("restart", "true");
-    location.reload();  
-}
-
-var reStart = sessionStorage.getItem("restart");
-
-window.onload = () => {
-    if (reStart) {
-        sessionStorage.removeItem("restart");
-        startQuiz();
-    }
-}
-
-
-// function resetQuestions (event) {
-//     answers = [];
-//     index = 0;
-//     document.getElementById("quiz").classList.remove("hidden");
-//     initialiseImages(index);
-//     document.getElementById("back-button").classList.add("hidden");
+// function reloadPage() {
+//     sessionStorage.setItem("restart", "true");
+//     location.reload();  
 // }
+
+// var reStart = sessionStorage.getItem("restart");
+
+// window.onload = () => {
+//     if (reStart) {
+//         sessionStorage.removeItem("restart");
+//         startQuiz();
+//     }
+// }
+
+
+function resetQuestions (event) {
+    answers = [];
+    index = 0;
+    document.getElementById("quiz").classList.remove("hidden");
+    initialiseImages();
+    document.getElementById("back-button").classList.add("hidden");
+}
 
 function previousQuestion (event) {
     answers.pop();

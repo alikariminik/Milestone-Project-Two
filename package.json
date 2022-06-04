@@ -3,7 +3,7 @@
     "jquery": "^3.6.0",
     "unsplash-js": "^7.0.15"
   },
-  "name": "milestone-project-two",
+  "name": "npm",
   "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
   "version": "1.0.0",
   "main": "script.js",

@@ -1,7 +1,8 @@
 const { expect } = require("@jest/globals");
-const startQuiz = require("../javascript/startquizbutton")
-const initialiseImages = require("../javascript/script.js")
+const startQuiz = require("../javascript/startQuizButton")
+const initialiseImages = require("../javascript/options")
 
+// https://pawelgrzybek.com/mocking-functions-and-modules-with-jest/
 
 beforeEach( () => {
     let fs = require("fs");
@@ -10,8 +11,6 @@ beforeEach( () => {
     document.write(fileContents);
     document.close();
 });
-
-
 
 describe("DOM tests on button click which call startQuiz function", () => {
     test("expects initialiseImages to be called correctly", () => {
