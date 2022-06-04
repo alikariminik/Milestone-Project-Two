@@ -53,10 +53,14 @@ function addAnswer(isAnswerA) {
     isAnswerA ? answers.push(OPTIONS[index].a) : answers.push(OPTIONS[index].b);
 }
 
-function handleImageClick(option, index) {
-    console.log(option, index);
-    updateOptionPhotos(index + 1);
+function handleOptionClick(isOptionA) {
+    addAnswer(isOptionA);
+    index - index + 1; 
+    updateOptionPhotos(index);
+    updateQuestionText(index, "question-generation-field");
+    $("#back-button").html(`<button" class="back-button"> back to last question <i class="fa-solid fa-arrow-left"></i></button>`)
 }
+
 
 function initialiseImages(index) {
     let optionAImage = document.getElementById(OPTION_A_ID);
