@@ -35,17 +35,11 @@ function removeIntroductionText () {
     $("img").removeClass("hidden");
 }
 
-function resetQuestions (event) {
+function resetQuestions () {
     answers = [];
     index = 0;
-
+    document.getElementById("quiz").classList.remove("hidden");
     initialiseImages(index);
-
-    updateElementWithRandomPhoto("beaches", OPTION_A_ID, index + 1);
-    updateElementWithRandomPhoto("mountain range", OPTION_B_ID, index + 1);
-
-    document.getElementById("question-generation-field").innerHTML = `<p class="test">Beaches or Mountains?</p>`;
-
 }
 
 function previousQuestion (event) {
