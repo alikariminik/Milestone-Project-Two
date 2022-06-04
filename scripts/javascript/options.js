@@ -7,7 +7,7 @@ const backButton = document.getElementById("back-button");
 const OPTIONS = [{
         a: {
             name: "Beaches",
-            searchQuery: "Santa Monica Beach",
+            searchQuery: "Turks and Caicos",
             id: ["9357", "9937002"]
         }, //[Beach, Beach Club]
         b: {
@@ -19,7 +19,7 @@ const OPTIONS = [{
     {
         a: {
             name: "Adventurous",
-            searchQuery: "Jet Skiing",
+            searchQuery: "hiking",
             id: ["7305", "9371", "7302004", "9902003"]
         }, //[Adventure Sports Facility, Water Sport, Hiking Trail, Amusement Park]
         b: {
@@ -36,14 +36,14 @@ const OPTIONS = [{
         }, //[Museum, Monument, Memorial, Historic Site, Battlefield ]
         b: {
             name: "Party",
-            searchQuery: "Disco",
+            searchQuery: "Partying",
             id: ["9379002", "9379006", "9379004", "9379008", "9379009"]
         }, // [Disco Club, Cocktail Bar, Bar, Jazz Club, Comedy Club ]
     },
     {
         a: {
             name: "Cultural",
-            searchQuery: "Van Gogh",
+            searchQuery: "Mona Lisa",
             id: ["7318005", "7318004", "7339002", "7339003", "7339004", "7315"]
         }, //[Theater, Opera House, Church, Mosque, Synagog, Restaurant]
         b: {
@@ -84,6 +84,7 @@ function updateQuestionText(index, id) {
 
 function addAnswer(isAnswerA) {
     isAnswerA ? answers.push(OPTIONS[index].a) : answers.push(OPTIONS[index].b);
+    console.log(answers)
 }
 
 function handleOptionClick(isOptionA) {
@@ -94,8 +95,6 @@ function handleOptionClick(isOptionA) {
 		index = index + 1;
 		updateOptionPhotos(index);
     	updateQuestionText(index, "question-generation-field");
-		$("#back-button").html("<button class='back-button'>back to last question <i class='fa-solid fa-arrow-left'></i> </button>");
-	}
 }
 
 

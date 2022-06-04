@@ -15,8 +15,6 @@ function startQuiz () {
 
      $("#iw").addClass("images-wrapper");
 
-     document.getElementById("back-button").addEventListener("click", previousQuestion);
-
      $("#reset-button").html(`<button class="reset-button">Home   <i class="fa-solid fa-house"></i> </button>`);
      document.getElementById("reset-button").addEventListener("click", reloadPage)
 }
@@ -25,7 +23,7 @@ function reloadPage () {
     document.location.reload();
 }
 
-function previousQuestion (event) {
+function previousQuestion () {
     answers.pop();
     index = index - 1;
 
