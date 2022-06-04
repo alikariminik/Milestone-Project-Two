@@ -1,14 +1,9 @@
-function startQuiz (event) {
-    let answers = [];
-    let index = 0;
+let answers = [];
+let index = 0;
 
+function startQuiz (event) {
+    removeIntroductionText();
     initialiseImages(index);
-    
-    const intro = document.getElementsByClassName("introduction")[0] 
-    intro.remove();
-    const button = document.getElementsByTagName("button")[0]
-    button.remove();
-    $("img").removeClass("hidden");
 
     
     updateElementWithRandomPhoto("beaches", OPTION_A_ID, index + 1);
@@ -30,6 +25,14 @@ function startQuiz (event) {
 
      $("#reset-button").html("<button class='reset-button'>start again <i class='fa-solid fa-arrow-rotate-right'></i> </button>");
      document.getElementById("reset-button").addEventListener("click", resetQuestions);   
+}
+
+function removeIntroductionText () {
+    const intro = document.getElementsByClassName("introduction")[0] 
+    intro.remove();
+    const button = document.getElementsByTagName("button")[0]
+    button.remove();
+    $("img").removeClass("hidden");
 }
 
 function resetQuestions (event) {
