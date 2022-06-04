@@ -17,31 +17,12 @@ function startQuiz () {
 
      document.getElementById("back-button").addEventListener("click", previousQuestion);
 
-     $("#reset-button").html("<button class='reset-button'>start again <i class='fa-solid fa-arrow-rotate-right'></i> </button>");
-     document.getElementById("reset-button").addEventListener("click", "resetQuestions")
+     $("#reset-button").html(`<button class="reset-button">Home   <i class="fa-solid fa-house"></i> </button>`);
+     document.getElementById("reset-button").addEventListener("click", reloadPage)
 }
 
-// function reloadPage() {
-//     sessionStorage.setItem("restart", "true");
-//     location.reload();  
-// }
-
-// var reStart = sessionStorage.getItem("restart");
-
-// window.onload = () => {
-//     if (reStart) {
-//         sessionStorage.removeItem("restart");
-//         startQuiz();
-//     }
-// }
-
-
-function resetQuestions (event) {
-    answers = [];
-    index = 0;
-    document.getElementById("quiz").classList.remove("hidden");
-    initialiseImages();
-    document.getElementById("back-button").classList.add("hidden");
+function reloadPage () {
+    document.location.reload();
 }
 
 function previousQuestion (event) {
@@ -50,11 +31,11 @@ function previousQuestion (event) {
 
     updateOptionPhotos(index);
     updateQuestionText(index, "question-generation-field")
-    if (index === 0){
-        document.getElementById("back-button").classList.add("hidden");
-     } else if (index === 1 ) {
-        document.getElementById("back-button").classList.remove("hidden");
-     }
+    // if (index === 0){
+    //     document.getElementById("back-button").classList.add("hidden");
+    //  } else if (index === 1 ) {
+    //     document.getElementById("back-button").classList.remove("hidden");
+    //  }
 }
 
 module.exports = startQuiz;

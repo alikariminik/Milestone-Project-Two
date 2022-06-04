@@ -7,43 +7,43 @@ const backButton = document.getElementById("back-button");
 const OPTIONS = [{
         a: {
             name: "Beaches",
-            searchQuery: "beach resort",
+            searchQuery: "Santa Monica Beach",
             id: ["9357", "9937002"]
         }, //[Beach, Beach Club]
         b: {
             name: "Mountain Range",
-            searchQuery: "mountain range",
+            searchQuery: "Mount Everest",
             id: ["7302002", "8099002", "9935", "9362026"]
         }, //[Mountain Bike Trail, Mountain Peak, Mountain Pass, Ski Resort]
     },
     {
         a: {
             name: "Adventurous",
-            searchQuery: "adventure activities",
+            searchQuery: "Jet Skiing",
             id: ["7305", "9371", "7302004", "9902003"]
         }, //[Adventure Sports Facility, Water Sport, Hiking Trail, Amusement Park]
         b: {
             name: "Relaxing",
-            searchQuery: "massage",
+            searchQuery: "Sunbathing",
             id: ["9378005", "7338", "7314005"]
         }, // [Sauna, Solarium & Massage, Swimming Pool, Resort]
     },
     {
         a: {
             name: "Historical",
-            searchQuery: "historic monuments",
+            searchQuery: "Houses of Parliament",
             id: ["7317", "7376003", "9362007", "9362004", "9362002"]
         }, //[Museum, Monument, Memorial, Historic Site, Battlefield ]
         b: {
             name: "Party",
-            searchQuery: "nightlife",
+            searchQuery: "Disco",
             id: ["9379002", "9379006", "9379004", "9379008", "9379009"]
         }, // [Disco Club, Cocktail Bar, Bar, Jazz Club, Comedy Club ]
     },
     {
         a: {
             name: "Cultural",
-            searchQuery: "cultural arts",
+            searchQuery: "Van Gogh",
             id: ["7318005", "7318004", "7339002", "7339003", "7339004", "7315"]
         }, //[Theater, Opera House, Church, Mosque, Synagog, Restaurant]
         b: {
