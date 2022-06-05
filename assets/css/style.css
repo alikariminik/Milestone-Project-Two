@@ -2,11 +2,10 @@
 
 #main-logo {
     font-size: 48px;
-    /* padding-left: 20px;
-    margin-top: 20px; */
     text-decoration: none;
     display: flex;
     justify-content: center;
+    color: #F7703B;
 }
 
 /*------- Welcome Section----------*/
@@ -16,14 +15,18 @@
     font-style: italic;
     font-family: 'Merriweather Sans', sans-serif;
     font-size: 20px;
-    color: black;
+    color: #355070;
 }
+
 
 .button-positioning {
     display: flex;
     justify-content:center;
 }
 
+.background{
+    background-color: #D9EBEC;
+}
 
 #launch-questions {
     text-transform: capitalize;
@@ -32,14 +35,14 @@
     font-size: 20px;
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 400;
-    background-color: blueviolet;
-    color: yellow;
+    background-color: #F7703B;
+    color: #FFE285;
     text-align: center;
 }
 
 #launch-questions:hover {
-    background-color: yellow;
-    color: blueviolet;
+    background-color: #FFE285;
+    color: #F7703B;
 }
 
 #question-generation-field {
@@ -49,8 +52,7 @@
 }
 
 .quiz-question {
-    background-color: blueviolet;
-    color: yellow;
+    color: #355070;
     font-size: 30px;
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 400;
@@ -100,14 +102,14 @@
     font-size: 20px;
     font-family: 'Merriweather Sans', sans-serif;
     font-weight: 400;
-    background-color: blueviolet;
-    color: yellow;
+    background-color: #F7703B;
+    color: #FFE285;
     text-align: center;
 }
 
 .reset-button:hover {
-    background-color: yellow;
-    color: blueviolet;
+    background-color: #FFE285;
+    color: #F7703B;
 }
 
 /*.options{
