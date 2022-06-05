@@ -18,6 +18,11 @@ function getDestination(ids) {
             console.log(data);
             if (data.results.length > 0) {
                 const location = data.results[getRandomNumber(data.results.length) - 1];
+                console.log(location);
+                var city = location.address.countrySubdivision;
+                console.log(city);
+                var country = location.address.country;
+                console.log(country);
                 //document.getElementById("destination").innerHTML = location;
                 // localname
                 // country
@@ -38,7 +43,7 @@ function displayDestination() {
             <div class="ticket-box">
                 <p class="suggestion">We think you're going to love...</p>
                 <div class="image-container"> <img class="option-image"src="assets/images/burj.avif" alt=photo of burj khalifa></div>
-                <div style="text-align:center" class="destination-text-box"><h2>City</h2><hr class="hidden"><h2>Country</h2></div>
+                <div style="text-align:center" class="destination-text-box"><h2>${city}</h2><hr class="hidden"><h2>${country}</h2></div>
             </div>
         </div>
     </div>`);

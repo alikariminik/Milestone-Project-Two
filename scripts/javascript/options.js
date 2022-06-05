@@ -11,7 +11,7 @@ const OPTIONS = [{
             id: ["9357", "9937002"]
         }, //[Beach, Beach Club]
         b: {
-            name: "Mountain Range",
+            name: "Mountains",
             searchQuery: "u5yopQOsFqg",
             id: ["7302002", "8099002", "9935", "9362026"]
         }, //[Mountain Bike Trail, Mountain Peak, Mountain Pass, Ski Resort]
@@ -90,7 +90,8 @@ function addAnswer(isAnswerA) {
 function handleOptionClick(isOptionA) {
 	if (index === OPTIONS.length - 1) {
 		handleFinalOption(isOptionA);
-        displayDestination();
+        setTimeout(displayDestination, 500);
+        //displayDestination();
 	} else {
 		addAnswer(isOptionA);
 		index = index + 1;
