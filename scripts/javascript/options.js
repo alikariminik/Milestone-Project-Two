@@ -79,7 +79,7 @@ function updateOptionPhotos(index) {
 function updateQuestionText(index, id) {
     let nameA = OPTIONS[index].a.name;
     let nameB = OPTIONS[index].b.name;
-    document.getElementById(id).innerHTML = `<p class="quiz-question">${nameA} or ${nameB}</p>`;
+    document.getElementById(id).innerHTML = `<p class="quiz-question">${nameA} or ${nameB}?</p>`;
 }
 
 function addAnswer(isAnswerA) {
