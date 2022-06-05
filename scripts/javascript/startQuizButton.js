@@ -2,7 +2,7 @@ let answers = [];
 let index = 0;
 
 function removeIntroductionText () {
-    const intro = document.getElementsByClassName("introduction")[0] 
+    const intro = document.getElementsByClassName("introduction")[0]
     intro.remove();
     const button = document.getElementsByTagName("button")[0]
     button.remove();
@@ -15,8 +15,9 @@ function startQuiz () {
 
      $("#iw").addClass("images-wrapper");
 
-     $("#reset-button").html(`<button class="reset-button">Home   <i class="fa-solid fa-house"></i> </button>`);
-     document.getElementById("reset-button").addEventListener("click", reloadPage)
+     $("#home-button").html(`<button class="home-button">Home
+        <i class="fa-solid fa-house"></i> </button>`);
+        document.getElementById("home-button").addEventListener("click", reloadPage);
 }
 
 function reloadPage () {

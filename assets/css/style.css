@@ -99,7 +99,7 @@
     color: blueviolet;
 }
 
-.reset-button {
+.home-button {
     text-transform: capitalize;
     width: fit-content;
     letter-spacing: 1px;
@@ -111,7 +111,7 @@
     text-align: center;
 }
 
-.reset-button:hover {
+.home-button:hover {
     background-color: #FFE285;
     color: #F7703B;
 }

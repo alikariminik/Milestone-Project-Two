@@ -1,15 +1,15 @@
-let TOMTOM_API_KEY = "Ss34b0BCennQsGT7hCzfgvlWNmh35biC"
+let TOMTOM_API_KEY = "Ss34b0BCennQsGT7hCzfgvlWNmh35biC";
 
 function getIdsForRequest(answers) {
     return answers.reduce((prev, current) => {
         prev = prev.concat(current.id);
         return prev;
-    }, [])
-}
+    }, []);
+};
 
 function getDestination(ids) {
-    const tenIds = ids.sort(() => .5 - Math.random()).slice(0, 9); // API can only have 10 ids so need to sort
-    const tenCountryCodes = countryCodes.sort(() => .5 - Math.random()).slice(0, 9);
+    const tenIds = ids.sort(() => 0.5 - Math.random()).slice(0, 9); // API can only have 10 ids so need to sort
+    const tenCountryCodes = countryCodes.sort(() => 0.5 - Math.random()).slice(0, 9);
     const url = `https://api.tomtom.com/search/2/categorySearch/places.json?key=${TOMTOM_API_KEY}&limit=100&ofs=1900&rcategorySet=${tenIds.join}countrySet=${tenCountryCodes.join(",")}`;
 
     fetch(url)
@@ -19,9 +19,9 @@ function getDestination(ids) {
             if (data.results.length > 0) {
                 const location = data.results[getRandomNumber(data.results.length) - 1];
                 console.log(location);
-                var city = location.address.countrySubdivision;
+                let city = location.address.countrySubdivision;
                 console.log(city);
-                var country = location.address.country;
+                let country = location.address.country;
                 console.log(country);
                 //document.getElementById("destination").innerHTML = location;
                 // localname
@@ -35,36 +35,21 @@ function getDestination(ids) {
 function getRandomNumber(n) {
     return Math.round(Math.random() * n);
 }
- 
+
 function displayDestination() {
     $("#destination").html(`
     <div class="container">
         <div class="flex-box">
             <div class="ticket-box">
                 <p class="suggestion">We think you're going to love...</p>
-                <div class="image-container"> <img class="option-image"src="assets/images/burj.avif" alt=photo of burj khalifa></div>
-                <div style="text-align:center" class="destination-text-box"><h2>${city}</h2><hr class="hidden"><h2>${country}</h2></div>
+                <div class="image-container"> <img class="option-image"
+                src="assets/images/burj.avif" alt=photo of burj khalifa></div>
+                <div style="text-align:center" class="destination-text-box">
+                <h2>city</h2><hr class="hidden"><h2>country</h2></div>
             </div>
         </div>
     </div>`);
 }
-    
-    
-//     const cat = document.getElementById("destination");
-//     cat.innerHTML(`
-//     <div class="container">
-//         <div class="flex-box">
-//             <div class="ticket-box">
-//                 <div> <img></div>
-//                 <div><h2>City</h2><hr style: display: none><h2>Country</h2>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>`);
-// }
-
-
-
 
 module.exports = {
     getDestination,
