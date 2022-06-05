@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     color: #F7703B;
+    padding-top: 10px;
 }
 
 /*------- Welcome Section----------*/
@@ -114,6 +115,21 @@
     background-color: #FFE285;
     color: #F7703B;
 }
+
+
+/*------------ Final Screen ------------*/
+
+.flex-box{
+    display: flex;
+    justify-content: center;
+}
+
+.ticket-box{
+    height: 600px;
+    width: 400px;
+}
+
+
 
 /*.options{
     height:800px;

@@ -90,6 +90,7 @@ function addAnswer(isAnswerA) {
 function handleOptionClick(isOptionA) {
 	if (index === OPTIONS.length - 1) {
 		handleFinalOption(isOptionA);
+        displayDestination();
 	} else {
 		addAnswer(isOptionA);
 		index = index + 1;
@@ -119,4 +120,4 @@ function initialiseImages() {
     optionBImage.addEventListener("click", () => handleOptionClick(true));
 }
 
-module.exports = {OPTIONS, initialiseImages}
+module.exports = {OPTIONS, initialiseImages,}

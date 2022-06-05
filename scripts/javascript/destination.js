@@ -18,7 +18,7 @@ function getDestination(ids) {
             console.log(data);
             if (data.results.length > 0) {
                 const location = data.results[getRandomNumber(data.results.length) - 1];
-                document.getElementById("destination").innerHTML = location;
+                //document.getElementById("destination").innerHTML = location;
                 // localname
                 // country
                 //updateElementWithRandomPhoto(location, "destinationImgId")
@@ -30,10 +30,40 @@ function getDestination(ids) {
 function getRandomNumber(n) {
     return Math.round(Math.random() * n);
 }
+ 
+function displayDestination() {
+    $("#destination").html(`
+    <div class="container">
+        <div class="flex-box">
+            <div class="ticket-box">
+                <div> <img src="https://unsplash.com/photos/CDOx0S1D5xc" alt=photo of burj khalifa></div>
+                <div style="text-align:center"><h2>City</h2><hr class="hidden"><h2>Country</h2></div>
+            </div>
+        </div>
+    </div>`);
+}
+    
+    
+//     const cat = document.getElementById("destination");
+//     cat.innerHTML(`
+//     <div class="container">
+//         <div class="flex-box">
+//             <div class="ticket-box">
+//                 <div> <img></div>
+//                 <div><h2>City</h2><hr style: display: none><h2>Country</h2>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>`);
+// }
+
+
+
 
 module.exports = {
     getDestination,
-    getIdsForRequest
+    getIdsForRequest,
+    displayDestination
 }
 
 //     console.log(location)
