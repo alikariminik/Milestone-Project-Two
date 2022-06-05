@@ -22,10 +22,10 @@
 
 .button-positioning {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
-.background{
+.background {
     background-color: #D9EBEC;
 }
 
@@ -94,7 +94,7 @@
     text-align: center;
 }
 
-.back-button:hover{
+.back-button:hover {
     background-color: yellow;
     color: blueviolet;
 }
@@ -119,40 +119,30 @@
 
 /*------------ Final Screen ------------*/
 
-.flex-box{
+.flex-box {
     display: flex;
     justify-content: center;
+    margin: 0px;
+    padding-top: 30px;
 }
 
-.ticket-box{
-    height: 200px;
-    width: 400px;
+.ticket-box {
+    width: 450px;
+    height: fit-content;
+    border-style: outset;
+    border-color: #355070;
+    background-color: #D9EBEC;
 }
 
-.final
-
-
-
-/*.options{
-    height:800px;
+.suggestion {
+    color: #355070;
+    font-size: 32px;
+    font-family: 'Lobster', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-emphasis-color: #F7703B;
 }
 
-.options div{
-    height: 700px;
-}*/
-
-/* .left-image-wrapper {
-    border-color: black;
-    justify-content: flex-start;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+#navigation {
+    padding-top: 15px;
 }
-
-.right-image-wrapper {
-    border-color: black;
-    justify-content: flex-end;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-} */

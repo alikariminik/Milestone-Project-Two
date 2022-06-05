@@ -36,8 +36,9 @@ function displayDestination() {
     <div class="container">
         <div class="flex-box">
             <div class="ticket-box">
+                <p class="suggestion">We think you're going to love...</p>
                 <div class="image-container"> <img class="option-image"src="assets/images/burj.avif" alt=photo of burj khalifa></div>
-                <div style="text-align:center"><h2>City</h2><hr class="hidden"><h2>Country</h2></div>
+                <div style="text-align:center" class="destination-text-box"><h2>City</h2><hr class="hidden"><h2>Country</h2></div>
             </div>
         </div>
     </div>`);
