@@ -90,7 +90,7 @@ function addAnswer(isAnswerA) {
 function handleOptionClick(isOptionA) {
     if (index === OPTIONS.length - 1) {
         handleFinalOption(isOptionA);
-        setTimeout(displayDestination, 500);
+        setTimeout(displayDestination, 2500);
         //displayDestination();
     } else {
         addAnswer(isOptionA);

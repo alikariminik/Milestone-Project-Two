@@ -18,11 +18,13 @@ function getDestination(ids) {
             console.log(data);
             if (data.results.length > 0) {
                 const location = data.results[getRandomNumber(data.results.length) - 1];
-                console.log(location);
-                let city = location.address.countrySubdivision;
-                console.log(city);
-                let country = location.address.country;
-                console.log(country);
+                // console.log(location);
+                // let fernando = location.address.countrySubdivision;
+                // console.log(fernando);
+                // let luis = location.address.country;
+                // console.log(luis);
+                // document.getElementById("city").innerText = fernando;
+                // document.getElementById("country").innerText = luis;
                 //document.getElementById("destination").innerHTML = location;
                 // localname
                 // country
@@ -31,6 +33,8 @@ function getDestination(ids) {
         })
         .catch((err) => console.error("error getting image"));
 };
+
+function writeToDocument() {}
 
 function getRandomNumber(n) {
     return Math.round(Math.random() * n);
@@ -45,7 +49,7 @@ function displayDestination() {
                 <div class="image-container"> <img class="option-image"
                 src="assets/images/burj.avif" alt=photo of burj khalifa></div>
                 <div style="text-align:center" class="destination-text-box">
-                <h2>city</h2><hr class="hidden"><h2>country</h2></div>
+                <p id="city"></p><hr class="hidden"><p id="country"></p></div>
             </div>
         </div>
     </div>`);

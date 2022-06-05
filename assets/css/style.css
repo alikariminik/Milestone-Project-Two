@@ -143,6 +143,14 @@
     text-emphasis-color: #F7703B;
 }
 
+#city{
+    font-size: 24px;
+}
+
+#country{
+    font-size: 24px;
+}
+
 #navigation {
     padding-top: 15px;
 }
