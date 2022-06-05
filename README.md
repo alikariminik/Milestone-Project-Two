@@ -13,7 +13,6 @@ This is the ReadMe for the website for the fictional web application called FlyM
         * [User Stories](#User-Stories)
     * [The Scope Plane](#The-Scope-Plane)
     * [The Structure Plane](#The-Structure-Plane)
-        * [Opportunities](#Opportunities)
     * [The Skeleton Plane](#The-Skeleton-Plane)
         * [Wireframes](#Wireframe-mockups)
     * [The Surface Plane](#The-Surface-Plane)

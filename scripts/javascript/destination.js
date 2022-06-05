@@ -18,13 +18,13 @@ function getDestination(ids) {
             console.log(data);
             if (data.results.length > 0) {
                 const location = data.results[getRandomNumber(data.results.length) - 1];
-                // console.log(location);
-                // let fernando = location.address.countrySubdivision;
-                // console.log(fernando);
-                // let luis = location.address.country;
-                // console.log(luis);
-                // document.getElementById("city").innerText = fernando;
-                // document.getElementById("country").innerText = luis;
+                console.log(location);
+                let fernando = location.address.countrySubdivision;
+                console.log(fernando);
+                let luis = location.address.country;
+                console.log(luis);
+                displayDestination();
+                document.getElementById("city").innerHTML(`<p>Meow</p>`);
                 //document.getElementById("destination").innerHTML = location;
                 // localname
                 // country
@@ -48,8 +48,8 @@ function displayDestination() {
                 <p class="suggestion">We think you're going to love...</p>
                 <div class="image-container"> <img class="option-image"
                 src="assets/images/burj.avif" alt=photo of burj khalifa></div>
-                <div style="text-align:center" class="destination-text-box">
-                <p id="city"></p><hr class="hidden"><p id="country"></p></div>
+                <div style="text-align:center" class="destination-text-box" id="city">
+                <div style="text-align:center" class="destination-text-box" id="country">
             </div>
         </div>
     </div>`);
