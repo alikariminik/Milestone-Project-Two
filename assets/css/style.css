@@ -7,6 +7,7 @@
     justify-content: center;
     color: #F7703B;
     padding-top: 10px;
+    font-family: 'Lobster', cursive;
 }
 
 #main-logo:hover, #main-logo:focus {
@@ -66,9 +67,15 @@
 }
 
 /*----------Image Container------*/
-img:focus {
+
+#optionA:focus, #optionA:hover{
     outline: 5px solid red;
-}
+} 
+
+#optionB:focus, #optionB:hover{
+    outline: 5px solid blue;
+} 
+
 
 .image-container {
     margin: 20px;
@@ -89,18 +96,6 @@ img:focus {
 }
 
 /*----------Post Button Click------*/
-
-.back-button {
-    text-transform: capitalize;
-    width: fit-content;
-    letter-spacing: 1px;
-    font-size: 20px;
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: 400;
-    background-color: blueviolet;
-    color: yellow;
-    text-align: center;
-}
 
 .home-button {
     text-transform: capitalize;

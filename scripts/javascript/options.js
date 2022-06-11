@@ -19,19 +19,19 @@ const OPTIONS = [{
     {
         a: {
             id: ["7305", "9371", "7302004", "9902003"],
-            name: "Adventurous",
+            name: "Adventures",
             searchQuery: "kQu71SCrwns"
         }, //[Adventure Sports Facility, Water Sport, Hiking Trail, Amusement Park]
         b: {
             id: ["9378005", "7338", "7314005"],
-            name: "Relaxing",
+            name: "Relaxation",
             searchQuery: "LmF4eBYs08c"
         } // [Sauna, Solarium & Massage, Swimming Pool, Resort]
     },
     {
         a: {
             id: ["7317", "7376003", "9362007", "9362004", "9362002"],
-            name: "Historical",
+            name: "History",
             searchQuery: "jNQK0RnwCSo"
         }, //[Museum, Monument, Memorial, Historic Site, Battlefield ]
         b: {
@@ -43,7 +43,7 @@ const OPTIONS = [{
     {
         a: {
             id: ["7318005", "7318004", "7339002", "7339003", "7339004", "7315"],
-            name: "Cultural",
+            name: "Culture",
             searchQuery: "7k91OUDYAQ0"
         }, //[Theater, Opera House, Church, Mosque, Synagog, Restaurant]
         b: {

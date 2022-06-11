@@ -83,9 +83,7 @@ Acceptance Criteria:
 * It should be entirely possible for an individual utilising a screen reader to easily utilise the site.
 
 Implementation:
-* The user will be able to navigate the site utilising a screen reader. All buttons and images can be selected utlising both mouse clicks and "keydown" enter.
-
-
+* The user will be able to navigate the site utilising a screen reader. 
 
 
 ### The Skeleton Plane
@@ -103,3 +101,21 @@ Tablet Device Wireframes
 Desktop Device Wireframes
  ![Desktop Device Wireframes](assets/wireframes/wireframe-desktop.PNG)
 
+### The Surface Plane
+
+#### Design 
+#### Colour Scheme
+I used a colour scheme which I felt conveyed the feelings of Summer which is arguably the most the popular time of year to go on holiday: Yellow = Sun, Orange = Sand, Blue = Ocean. I used the site Coolors to devise this colour palette. The exact colour palette can be viewed via the link below which directs to the site Coolors - 
+
+[Coolors]https://coolors.co/ffe285-f7703b-355070-59a5b1-d9ebec
+
+#### Typography
+I used the  'Lobstr' font for the Logo with 'Cursive' as the fallback font in case for any reason the font isn't being imported into the site correctly. I found 'Lobstr' through Google Fonts and I felt as though this font; when displaying the name of the website "Fly Me To... provided a clear and attractive looking logo instead of spending time designing a genuine logo.
+
+For the introductory text, I used the 'Merriweather Sans' font in italics with 'Sans-Serif' as the fallback font. I found that 'Merriweather Sans' was a quite subtle font which was very legible and easy to read multiple lines of clearly without being distracting. 'Merriweather Sans' was used again for the "Home" button for this same reason and I found that it makes sense for this font to represent the navigational link to the home page which had the introductory text in 'Merriweather Sans'.  
+
+'Lobstr' was used again for the style of the questions asked. This in conjunction with the ever-present 'Merriweather Sans' Fly Me To logo allows the user to connect the logo and the subsequent questions together so that the page reads as follows: "Fly Me to 'Beaches or Mountains'?, "Fly Me to 'Adventures or Relaxation'?" etc. 
+
+Finally, for the exact same reasoning as before, 'Lobstr' was used again for the style of the suggested destination location eg. "Fly Me to Paris, France?. 
+
+[Google Fonts]https://fonts.google.com/
