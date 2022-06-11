@@ -10,9 +10,11 @@ function getIdsForRequest(answers) {
 
 
 function getDestination(ids) {
-    const tenIds = ids.sort(() => 0.5 - Math.random()).slice(0, 9); // API can only have 10 ids so need to sort
-    const tenCountryCodes = countryCodes.sort(() => 0.5 - Math.random()).slice(0, 9);
-    const url = `https://api.tomtom.com/search/2/categorySearch/places.json?key=${TOMTOM_API_KEY}&limit=100&ofs=1900&rcategorySet=${tenIds.join}countrySet=${tenCountryCodes.join(",")}`;
+    const tenIds = getRandomFromArray(ids, 10); // API can only have 10 ids so need to sort
+    const tenCountryCodes = getRandomFromArray(tenCountryCodes, 10);
+    const url = `https://api.tomtom.com/search/2/categorySearch/.json?key=${TOMTOM_API_KEY}&categorySet=${tenIds.join(
+        ","
+      )}&countrySet=${tenCountryCodes.join(",")}`;
 
     fetch(url)
         .then((response) => response.json())
@@ -20,21 +22,31 @@ function getDestination(ids) {
             console.log(data);
             if (data.results.length > 0) {
                 const location = data.results[getRandomNumber(data.results.length) - 1];
-                console.log(location);
-                let fernando = location.address.countrySubdivision;
-                console.log(fernando);
-                let luis = location.address.country;
-                console.log(luis);
-                displayDestination();
-                document.getElementById("city").innerHTML(`<p>Meow</p>`);
-                //document.getElementById("destination").innerHTML = location;
-                // localname
-                // country
-                //updateElementWithRandomPhoto(location, "destinationImgId")
+                getDestinationImage(location).then((image) => {
+                    document.getElementById("destination-image").src =image.urls.regular;
+                    displayDestination(location);
+                })
             }
         })
-        .catch((err) => console.error("error getting image"));
+        .catch((err) => console.error("error getting destination", err));
 };
+
+function getDestinationImage(location) {
+    return new Promise ((resolve, reject) => {
+        const url = `https://api.unsplash.com/search/photos?query=${location.address.country} capital&client_id=${UNSPLASH_API_KEY}&orientation=squarish&`;
+
+        fetch(url)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                if (data.results.length > 0) {
+                    resolve(data.results[0]);
+                }
+                reject()
+            })
+            .catch((err) => reject(err));
+    });
+}
 
 function getRandomFromArray(array, n) {
     return array.sort(() => 0.5 - Math.random()).slice(0, n - 1);
