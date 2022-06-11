@@ -37,6 +37,8 @@
         </p>
     </div>
 
+    <div id="spinner" class="hidden"></div>
+
     <div class ="background" id="quiz">
         <!--This section will where the two options appear. An Image on the left and an image on the right. Text will display over the image or just above it. The user will be asked to select one of the options
         which will cause the question to appear with another two options. This will continue a few times to narrow down the final result to a small pool of possibilities-->
@@ -64,7 +66,19 @@
         </div>
     </div>
 
-    <div class="background" id="destination">
+    <div class="background hidden animate-bottom" id="destination">
+        <div class="container">
+            <div class="flex-box">
+                <div class="ticket-box">
+                    <p class="suggestion">We think you're going to love...</p>
+                    <div class="image-container">
+                        <img class="option-image" id="destination-image" src="" alt="photo of selected destination">
+                    </div>
+                    <div style="text-align: center" class="destination-text-box suggestion" id="city"></div>
+                    <div style="text-align: center" class="destination-text-box suggestion" id="country"></div>
+                </div>
+            </div>
+        </div>
 
     </div>
 

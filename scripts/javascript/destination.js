@@ -7,9 +7,16 @@ function getIdsForRequest(answers) {
     }, []);
 };
 
-
+function displaySpinner(yes) {
+    if (yes) {
+        document.getElementById("spinner").classList.remove("hidden");
+    } else {
+        document.getElementById("spinner").classList.add("hidden");
+    }
+}
 
 function getDestination(ids) {
+    displaySpinner(true);
     const tenIds = getRandomFromArray(ids, 10); // API can only have 10 ids so need to sort
     const tenCountryCodes = getRandomFromArray(tenCountryCodes, 10);
     const url = `https://api.tomtom.com/search/2/categorySearch/.json?key=${TOMTOM_API_KEY}&categorySet=${tenIds.join(
@@ -25,6 +32,7 @@ function getDestination(ids) {
                 getDestinationImage(location).then((image) => {
                     document.getElementById("destination-image").src =image.urls.regular;
                     displayDestination(location);
+                    displaySpinner(false);
                 })
             }
         })
