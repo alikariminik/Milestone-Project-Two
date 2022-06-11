@@ -18,7 +18,7 @@ function displaySpinner(yes) {
 function getDestination(ids) {
     displaySpinner(true);
     const tenIds = getRandomFromArray(ids, 10); // API can only have 10 ids so need to sort
-    const tenCountryCodes = getRandomFromArray(tenCountryCodes, 10);
+    const tenCountryCodes = getRandomFromArray(countryCodes, 10);
     const url = `https://api.tomtom.com/search/2/categorySearch/.json?key=${TOMTOM_API_KEY}&categorySet=${tenIds.join(
         ","
       )}&countrySet=${tenCountryCodes.join(",")}`;
@@ -64,7 +64,7 @@ function getRandomNumber(n) {
     return Math.round(Math.random() * n);
 }
 
-function displayDestination() {
+function displayDestination(location) {
     document.getElementById("destination").classList.remove("hidden");
     document.getElementById("city").innerHTML =`<p>${location.address.localName}</p>`;
     document.getElementById("country").innerHTML =`<p>${location.address.country}</p>`;
