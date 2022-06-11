@@ -34,25 +34,18 @@ function getDestination(ids) {
         .catch((err) => console.error("error getting image"));
 };
 
-function writeToDocument() {}
+function getRandomFromArray(array, n) {
+    return array.sort(() => 0.5 - Math.random()).slice(0, n - 1);
+}
 
 function getRandomNumber(n) {
     return Math.round(Math.random() * n);
 }
 
 function displayDestination() {
-    $("#destination").html(`
-    <div class="container">
-        <div class="flex-box">
-            <div class="ticket-box">
-                <p class="suggestion">We think you're going to love...</p>
-                <div class="image-container"> <img class="option-image"
-                src="assets/images/burj.avif" alt=photo of burj khalifa></div>
-                <div style="text-align:center" class="destination-text-box" id="city">
-                <div style="text-align:center" class="destination-text-box" id="country">
-            </div>
-        </div>
-    </div>`);
+    document.getElementById("destination").classList.remove("hidden");
+    document.getElementById("city").innerHTML =`<p>${location.address.localName}</p>`;
+    document.getElementById("country").innerHTML =`<p>${location.address.country}</p>`;
 }
 
 module.exports = {
