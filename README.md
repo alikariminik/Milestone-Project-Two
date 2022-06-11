@@ -73,7 +73,19 @@ Acceptance Criteria:
 * It should be entirely possible for an individual utilising a keyboard only to be able to click "Find my dream holiday!" button, home button and select on option a or option b image.
 
 Implementation:
-* The user will be able to navigate the site using only a keyboard. All elements will be individually selectable through the keyboard and standard keyboard controls.
+* The user will be able to navigate the site using only a keyboard. All buttons and images can be selected utlising both mouse clicks and "keydown" enter.
+
+User Story:
+
+> As a user I want to be able to use a screen reader to help use this site.
+
+Acceptance Criteria:
+* It should be entirely possible for an individual utilising a screen reader to easily utilise the site.
+
+Implementation:
+* The user will be able to navigate the site utilising a screen reader. All buttons and images can be selected utlising both mouse clicks and "keydown" enter.
+
+
 
 
 ### The Skeleton Plane
