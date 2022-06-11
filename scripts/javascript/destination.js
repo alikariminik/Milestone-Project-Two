@@ -7,6 +7,8 @@ function getIdsForRequest(answers) {
     }, []);
 };
 
+
+
 function getDestination(ids) {
     const tenIds = ids.sort(() => 0.5 - Math.random()).slice(0, 9); // API can only have 10 ids so need to sort
     const tenCountryCodes = countryCodes.sort(() => 0.5 - Math.random()).slice(0, 9);
