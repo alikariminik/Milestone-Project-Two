@@ -15,9 +15,10 @@ function startQuiz () {
 
      $("#iw").addClass("images-wrapper");
 
-     $("#home-button").html(`<button class="home-button">Home
+     $("#home-button").html(`<button style="cursor: pointer" class="home-button">Home
         <i class="fa-solid fa-house"></i> </button>`);
         document.getElementById("home-button").addEventListener("click", reloadPage);
+
 }
 
 function reloadPage () {

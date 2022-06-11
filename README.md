@@ -45,13 +45,40 @@ Features Planned
 * The site should be fully accessible for screen reader users
 
 ### The Structure Plane
-My website has 4 pages, and I created Wireframes for them by hand, which I have attached here:
+User Story:
+
+> As a user, I want a fun and creative way of finding my next holiday destination.
+
+Acceptance Criteria:
+* It should be clear that it is a site designed to identify a holiday destination.
+
+Implementation:
+* The website name, colour scheme font choice and introductory text all convey a to the user that this is a different and fun way of identifying the user's next holdiday destination. The  introductory text explains the purpose of the site in a clear and concise way and the focal point of the intitial page is the "Find my dream holiday!" button.
+
+User Story:
+
+> As a user, I want to be able to easily utilise the site and get a holiday destination suggestion fast.
+
+Acceptance Criteria:
+* The start to the end of the application should be easily achieved in just a few clicks. 
+
+Implementation:
+* The end screen which displays a potential holiday destination can be achieved through just 5 clicks. The site is responsive to give visual feedback when an option can be clicked - either through the use of the cursor icon changing to a pointer for the buttons and clicable images as well as the buttons changing colours on hover. 
+
+
 
 ### The Skeleton Plane
 #### Wireframe Mockups 
 I utilised Balsamiq to produce my wireframes of how the app would appear across different devices. The app was intended to be contained within one page, however as the app required different content to be loaded at different times, the wireframes display a combination of different views of the site, with the introductory view and images seen in one and then the final page view adjacent to it.
 
-![Desktop Device Wireframes](assets/wireframes/wireframe-mobile.PNG)
-![Tablet Device Wireframes](assets/wireframes/wireframe-tablet.PNG)
-![Mobile Device Wireframes](assets/wireframes/wireframe-desktop.PNG)
+Mobile Device Wireframes 
+ 
+ ![Mobile Device Wireframes](assets/wireframes/wireframe-mobile.PNG)
+
+Tablet Device Wireframes
+
+ ![Tablet Device Wireframes](assets/wireframes/wireframe-tablet.PNG)
+
+Desktop Device Wireframes
+ ![Desktop Device Wireframes](assets/wireframes/wireframe-desktop.PNG)
 
