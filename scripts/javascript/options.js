@@ -118,7 +118,19 @@ function initialiseImages() {
 
     optionAImage.addEventListener("click", () => handleOptionClick(true));
     optionBImage.addEventListener("click", () => handleOptionClick(true));
-}
+
+    optionAImage.addEventListener("keydown", function (e) {
+        if (e.key === 'Enter') {
+            handleOptionClick(true);
+        }
+    });
+    
+    optionBImage.addEventListener("keydown", function (e) {
+        if (e.key === 'Enter') {
+            handleOptionClick(true);
+        }
+    });
+};
 
 module.exports = {
     OPTIONS,

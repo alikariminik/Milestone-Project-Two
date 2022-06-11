@@ -9,6 +9,10 @@
     padding-top: 10px;
 }
 
+#main-logo:hover, #main-logo:focus {
+    color: #355070;
+}
+
 /*------- Welcome Section----------*/
 
 .introduction {
@@ -41,7 +45,7 @@
     text-align: center;
 }
 
-#launch-questions:hover {
+#launch-questions:hover, #launch-questions:focus {
     background-color: #FFE285;
     color: #F7703B;
 }
@@ -62,6 +66,10 @@
 }
 
 /*----------Image Container------*/
+img:focus {
+    outline: 5px solid red;
+}
+
 .image-container {
     margin: 20px;
     display: flex;
@@ -94,11 +102,6 @@
     text-align: center;
 }
 
-.back-button:hover {
-    background-color: yellow;
-    color: blueviolet;
-}
-
 .home-button {
     text-transform: capitalize;
     width: fit-content;
@@ -111,7 +114,7 @@
     text-align: center;
 }
 
-.home-button:hover {
+.home-button:hover, .home-button:focus {
     background-color: #FFE285;
     color: #F7703B;
 }

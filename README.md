@@ -63,8 +63,17 @@ Acceptance Criteria:
 * The start to the end of the application should be easily achieved in just a few clicks. 
 
 Implementation:
-* The end screen which displays a potential holiday destination can be achieved through just 5 clicks. The site is responsive to give visual feedback when an option can be clicked - either through the use of the cursor icon changing to a pointer for the buttons and clicable images as well as the buttons changing colours on hover. 
+* The end screen which displays a potential holiday destination can be achieved through just 5 clicks. The site is responsive to give visual feedback when an option can be clicked - either through the use of the cursor icon changing to a pointer for the buttons and clicable images as well as the buttons changing colours on hover. Home button allows for an easy restart of the application.
 
+User Story:
+
+> As a user I want to be able to use this site with my keyboard
+
+Acceptance Criteria:
+* It should be entirely possible for an individual utilising a keyboard only to be able to click "Find my dream holiday!" button, home button and select on option a or option b image.
+
+Implementation:
+* The user will be able to navigate the site using only a keyboard. All elements will be individually selectable through the keyboard and standard keyboard controls.
 
 
 ### The Skeleton Plane

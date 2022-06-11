@@ -21,7 +21,7 @@
 
 <body class="background">
     <header>
-        <a href="index.html" id="main-logo"><i class="fa-solid fa-plane-departure"></i>Fly Me To... </a>
+        <a href="index.html" title="Home Page" id="main-logo"><i class="fa-solid fa-plane-departure"></i>Fly Me To... </a>
     </header>
 
     <div class="introduction container background">
@@ -44,7 +44,7 @@
         which will cause the question to appear with another two options. This will continue a few times to narrow down the final result to a small pool of possibilities-->
         <div class="container">
             <div class="button-positioning">
-                <button id="launch-questions" style="cursor: pointer"> Find my dream holiday! </button>
+                <button id="launch-questions" title="Launch Questions!" style="cursor: pointer"> Find my dream holiday! </button>
             </div>
 
             <div id="question-generation-field"></div>
@@ -54,13 +54,13 @@
         <div id="iw" class="row options background">
             <div id="op-a" class="col-xs-12 col-sm-6">
                 <div class="image-container">
-                    <img id="optionA" class="option-image hidden" style="cursor: pointer" alt="Option A" src=".">
+                    <img id="optionA" class="option-image hidden" style="cursor: pointer" tabindex="1" title="Stock Image of Option A" alt="Option A" src=".">
                 </div>
             </div>
 
             <div id="op-b" class="col-xs-12 col-sm-6">
                 <div class="image-container">
-                    <img id="optionB" class="option-image hidden" style="cursor: pointer" alt="Option B" src=".">
+                    <img id="optionB" class="option-image hidden" style="cursor: pointer" tabindex="2" title="Stock Image of Option B" alt="Option B" src=".">
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@
                 <div class="ticket-box">
                     <p class="suggestion">We think you're going to love...</p>
                     <div class="image-container">
-                        <img class="option-image" id="destination-image" src="" alt="photo of selected destination">
+                        <img class="option-image" id="destination-image" src="." alt="photo of selected destination">
                     </div>
                     <div style="text-align: center" class="destination-text-box suggestion" id="city"></div>
                     <div style="text-align: center" class="destination-text-box suggestion" id="country"></div>
