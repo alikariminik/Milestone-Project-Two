@@ -4,7 +4,7 @@ Here is a link to the website [FlyMeTo](https://8000-alikarimini-milestonepr-wq0
 ## What is this ReadME for?
 This is the ReadMe for the website for the fictional web application called FlyMeTo. FlyMeTo is a web-based app built using HTML, CSS and JavaScript. Its target audience are those who are looking for a potential holiday destination. Through the asking of some questions, the application will suggest a potential holiday location based off of the answers users give. 
 
-![Mockup](assets/markup/mockup-flymeto.PNG)
+![Mockup](assets/markup/mockup-flymeto.PNG) 
 
 ## Table of Contents
 * [User Experience Design (UX)](#UX)
@@ -16,6 +16,15 @@ This is the ReadMe for the website for the fictional web application called FlyM
     * [The Skeleton Plane](#The-Skeleton-Plane)
         * [Wireframes](#Wireframe-mockups)
     * [The Surface Plane](#The-Surface-Plane)
+        * [Design](#design)
+            * [Colour-Scheme](#colour-scheme)
+            * [Imagery](#imagery)
+            * [Typography](#typography)
+    * [Features](#features)
+        * [UnsplashAPI](#unsplash-api)
+        * [TomTomAPI](#tomtom-api)
+        * [Planned / Scrapped Features](#planned--scrapped-features)
+    * [Testing](#testing)
 
 ## UX
 
@@ -104,12 +113,12 @@ Desktop Device Wireframes
 ### The Surface Plane
 
 #### Design 
-#### Colour Scheme
+##### Colour Scheme
 I used a colour scheme which I felt conveyed the feelings of Summer which is arguably the most the popular time of year to go on holiday: Yellow = Sun, Orange = Sand, Blue = Ocean. I used the site Coolors to devise this colour palette. The exact colour palette can be viewed via the link below which directs to the site Coolors - 
 
-[Coolors]https://coolors.co/ffe285-f7703b-355070-59a5b1-d9ebec
+[Coolors](https://coolors.co/ffe285-f7703b-355070-59a5b1-d9ebec)
 
-#### Typography
+##### Typography
 I used the  'Lobstr' font for the Logo with 'Cursive' as the fallback font in case for any reason the font isn't being imported into the site correctly. I found 'Lobstr' through Google Fonts and I felt as though this font; when displaying the name of the website "Fly Me To... provided a clear and attractive looking logo instead of spending time designing a genuine logo.
 
 For the introductory text, I used the 'Merriweather Sans' font in italics with 'Sans-Serif' as the fallback font. I found that 'Merriweather Sans' was a quite subtle font which was very legible and easy to read multiple lines of clearly without being distracting. 'Merriweather Sans' was used again for the "Home" button for this same reason and I found that it makes sense for this font to represent the navigational link to the home page which had the introductory text in 'Merriweather Sans'.  
@@ -118,8 +127,76 @@ For the introductory text, I used the 'Merriweather Sans' font in italics with '
 
 Finally, for the exact same reasoning as before, 'Lobstr' was used again for the style of the suggested destination location eg. "Fly Me to Paris, France?. 
 
-[Google Fonts]https://fonts.google.com/
+[Google Fonts](https://fonts.google.com/)
 
-#### Imagery
-The use of imagers is fundamental to the design of this site. I envisioned early on during this process that I wanted the questions asked to the user to be supported by a relevant image so it was very useful of my CodeInstitute tudor to recommend me to use the Unsplash API. After reading the documentation and registering with the site to obtain my own secret key, I got to work with implementing the API into my application. Orignally, I had set it so that a random image was requested each time the application is utilied. This is so that users were provided with a new image of "Beaches" or "Mountains" each time they answered the questions. However, during development I found that utilising the random image request was too unreliable as sometimes the images fetched were completely irrelevant to the question. For example, I found that when the beaches image was requested, sometimes an image of an Eagle would be fetched. This same issue was present for all the answer options and in order to rectify this, I changed my code so that the API was always requesting the same image on each run through. This was not ideal as I wanted the application to feel fresh still on each use but I felt as though using the same image achieved better results than running the risk of getting a completely irrelevant image. 
+##### Imagery
+The use of imagers is fundamental to the design of this site. I envisioned early on during this process that I wanted the questions asked to the user to be supported by a relevant image so it was very useful of my CodeInstitute tudor to recommend me to use the Unsplash API. After reading the documentation and registering with the site to obtain my own secret key, I got to work with implementing the API into my application. 
+
+Orignally, I had set it so that a random image was requested each time the application is utilied. This is so that users were provided with a new image of "Beaches" or "Mountains" each time they answered the questions. However, during development I found that utilising the random image request was too unreliable as sometimes the images fetched were completely irrelevant to the question. For example, I found that when the beaches image was requested, sometimes an image of an Eagle would be fetched. This same issue was present for all the answer options and in order to rectify this, I changed my code so that the API was always requesting the same image on each run through. This was not ideal as I wanted the application to feel fresh still on each use but I felt as though using the same image achieved better results than running the risk of getting a completely irrelevant image. 
+
+## Features
+### Unsplash API
+As mentioned previously, the Unsplash API was suggested to me by my CodeInstitute tutor after I outlined what I had envisioned for this project. I looked into the documentation of the Unsplash API and it seemed to be exactly what I was needing for my planned projects. Again, as previously mentioned, when using the get random image request, inconsistent results were acheieved and even after tweaking the search query to be more specific, unrelated images were still returned which I viewed to be too problematic to retain in this application so I opted for the requesting the same image for each answer option. 
+
+Perhaps in the future, if I had more time, I would explore other similar APIs (such as Pexels API) and test to see whether a random image request could have achieved what I was hoping for originally with the Unsplash API.
+
+[UnsplashAPI](https://unsplash.com/documentation)
+
+### TomTom API
+After searching the web for travel and tourism APIs which had the functionality to return a place in the world based of certain factors, I came across the TomTom API which after reading the documentation seemed like a very good fit for what I wanted the API to achieve. My goal for this API was for the user to answer the questions with their preference i.e. Beaches or Mountains and then a request would be sent to the TomTom API which would fetch a result in way of a place in the world which met most if not all the chosen preferneces. 
+
+However, after some iniital tests, it was made clear to me that there were indeed some drawbacks to this API which would mean that getting the exact use out of it that I wanted would not be so simple. 
+
+Firstly, given that I wanted the API to return a destination based of certain preferneces meant I needed to read through the API's assigned ID categories. This very long list of different points of interests can be viewed in Assets/TomTomAPI/TomTomIDCategories. I read through all of these categories and took a note of the relevant ID for those which seemed like they fitted the answer option categories. For example, for the option "Beaches", I noted the IDs "9357" and "9937002" which correspond to Beach and Beach Clubs, respectively, around the world. Therefore, if a user selects Beach as an option, these two IDs will be included in the request to the API to return a locaiton in the world. Full details of the categories and their IDs can be viewed within the Object named OPTIONS on rows 7 - 59 in Options.JS.
+
+An issue I came across when testing first testing sending off the request to the Tom Tom API was that you could only include 10 IDs within each request. This was disappointing as I had hoped for each preference to be considered in each request. However, as a work around to this and to keep this project idea alive, I opted to randomly select 10 IDs, that would be logged to the Answers Array after each User's option was selected, and send those off to the API. The downsides to this were that some of the user's preferences will not have been considered as they would have been selected. 
+
+Additionally, another downside to the API was that there was no way that I could find for the API to return a destination / location which met all of the IDs requested. As far as I am aware, the API returns a destinaition which matches at least of the IDs. This again was disappointing but I felt as though for the purpose of this project this was acceptable as long as the API requests were returning a different destination which at least met some of the individual's holiday criteria. 
+
+An additional problem I came across when testing this API was that the results were always returned in alphabetical order of the country name and further to this, only 100 results can be returned on each request. This meant that during initial testing, I would often find that my application was suggesting I go to Andora or United Arab Emirates due to the two countries Country Codes beginning with "A". This was problematic but my soloution to ensuring that the application returned a different country and place was to add country code paramters to the request. In order to not discriminate against any country, I made programmed the request to utilise 10 random country codes within the request each time. A full list of the country codes can be found in [data.js]scripts/javascript/data.js. Although this was not ideal, I did think it was an appropriate work around and it meant that a user was always bound to be suggested a holiday destination based of at least one of their preferences. 
+
+All in all, the Tom Tom API was great to work with despite its limitations and called on me to be creative and adaptive with my design in order to get the most out of it.
+
+[TomTomAPI](https://developer.tomtom.com/search-api/documentation/product-information/introduction)
+
+[TomTomAPI|PlacebyID](https://developer.tomtom.com/search-api/documentation/place-by-id-service/place-by-id#request-parameters)
+
+### Planned / Scrapped Features
+I had further ideas for additional features for this applicaiton but due to different reasons, these were either not pursued or scrapped during implementation and testing.
+
+The first of which was my plans to implement an additional API which was capable of displaying current avergae flight prices to the suggested destination. This would have shown on the page along side where the suggested location is displayed. I looked at several travel APIs which appeared to support this feature. The first of which was the SkyScanner API. Unfortunately, this was not free and you need to be an affiliate of Skyscanner to utilise the API. The next was Google Flights, but unforuntately this was shut down in 2018. I also looked into Kayak, TripAdvisor and Expedia APIs but again these were either too complicated for me or locked behind paywalls again. So after spending a signifcant period of time on this research, I abandoned this feature. 
+
+In addition to an additional API, I also wanted to incorporate a "Previous Question Button" which would take the usuer back to the previous question asked and also remove the user's answer for that question from the Answers array. However, after initial set up, the answers were not being removed from the Answers array and there was an issue which would result in the "Previous Question Button" disappearing and not re-appearing if the user went back to the initial question and then moved to the second question. After consultation with my CodeInstitute Tutor, it was agreed that due to time constraints, this feature would be scrapped as it was not essential to the overall functionality of the project. 
+
+Finally, it would have been nice to have included a button which would have immediately returned another random destination after one had already been suggested in order to avoid the user having to re-complete the questionaire. If I looked to expand on this project in the future, this and the other removed / scrapped features alluded to above would be on my list of additions. 
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Testing 
+
+### Validator Testing
+* HTML
+  * No errors were returned when passing through the official W3C Validator. [W3C Validator](https://validator.w3.org/nu/)
+
+* CSS
+  * No errors were returned when passing through the official Jigsaw Validator. [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator)
+
+* JSlint
+  * No errors were returned when passing through the official JSlint Validator. [JSlint Validator](https://www.jslint.com/)
+
+## Deployment
+
+* The site was deployed to GitHub pages. The steps to deploy the site are as follows:
+  * In the GitHub repository, navigate to the "settings" tab
+  * Select the pages link from the setting menu on the left hand side 
+  * Under the GitHub Pages from the source section drop-down menu, select the master branch 
+  * Once the master branch has been selected, click on "save".
+
+## Credits
+
+
 

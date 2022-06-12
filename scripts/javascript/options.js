@@ -90,8 +90,6 @@ function addAnswer(isAnswerA) {
 function handleOptionClick(isOptionA) {
     if (index === OPTIONS.length - 1) {
         handleFinalOption(isOptionA);
-        //setTimeout(displayDestination, 2500);
-        //displayDestination();
     } else {
         addAnswer(isOptionA);
         index = index + 1;
@@ -120,17 +118,17 @@ function initialiseImages() {
     optionBImage.addEventListener("click", () => handleOptionClick(true));
 
     optionAImage.addEventListener("keydown", function (e) {
-        if (e.key === 'Enter') {
+        if (e.key === "Enter") {
             handleOptionClick(true);
         }
     });
-    
+
     optionBImage.addEventListener("keydown", function (e) {
-        if (e.key === 'Enter') {
+        if (e.key === "Enter") {
             handleOptionClick(true);
         }
     });
-};
+}
 
 module.exports = {
     OPTIONS,

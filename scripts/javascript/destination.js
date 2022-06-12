@@ -5,7 +5,7 @@ function getIdsForRequest(answers) {
         prev = prev.concat(current.id);
         return prev;
     }, []);
-};
+}
 
 function displaySpinner(yes) {
     if (yes) {
@@ -33,11 +33,11 @@ function getDestination(ids) {
                     document.getElementById("destination-image").src =image.urls.regular;
                     displayDestination(location);
                     displaySpinner(false);
-                })
+                });
             }
         })
         .catch((err) => console.error("error getting destination", err));
-};
+}
 
 function getDestinationImage(location) {
     return new Promise ((resolve, reject) => {
@@ -75,9 +75,3 @@ module.exports = {
     getIdsForRequest,
     displayDestination
 }
-
-//     console.log(location)
-//     let destinationResults = document.getElementById("destination");
-//     destinationResults.innerHTML(`<h2 class="container">Based off your answers, we think you would like</h2>
-//     <div class="container"></div>`)
-// updateElementWithRandomPhoto(location, "destinationImgId")
