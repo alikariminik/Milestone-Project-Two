@@ -25,4 +25,4 @@ function reloadPage () {
     document.location.reload();
 }
 
-module.exports = startQuiz;
+module.exports = startQuiz, removeIntroductionText, reloadPage, initialiseImages;

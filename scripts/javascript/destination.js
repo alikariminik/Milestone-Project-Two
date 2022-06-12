@@ -41,7 +41,7 @@ function getDestination(ids) {
 
 function getDestinationImage(location) {
     return new Promise ((resolve, reject) => {
-        const url = `https://api.unsplash.com/search/photos?query=${location.address.country} capital&client_id=${UNSPLASH_API_KEY}&orientation=squarish&`;
+        const url = `https://api.unsplash.com/search/photos?query=${location.address.country}&client_id=${UNSPLASH_API_KEY}&orientation=squarish&`;
 
         fetch(url)
             .then((response) => response.json())

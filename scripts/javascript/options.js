@@ -131,6 +131,5 @@ function initialiseImages() {
 }
 
 module.exports = {
-    OPTIONS,
-    initialiseImages,
+    OPTIONS, OPTION_A_ID, OPTION_B_ID 
 }

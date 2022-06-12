@@ -178,6 +178,8 @@ Finally, it would have been nice to have included a button which would have imme
 
 ## Testing 
 
+
+
 ### Validator Testing
 * HTML
   * No errors were returned when passing through the official W3C Validator. [W3C Validator](https://validator.w3.org/nu/)
@@ -186,7 +188,7 @@ Finally, it would have been nice to have included a button which would have imme
   * No errors were returned when passing through the official Jigsaw Validator. [Jigsaw Validator](https://jigsaw.w3.org/css-validator/validator)
 
 * JSlint
-  * No errors were returned when passing through the official JSlint Validator. [JSlint Validator](https://www.jslint.com/)
+  * No major errors were returned when passing through the official JSlint Validator. [JSlint Validator](https://www.jslint.com/)
 
 ## Deployment
 
