@@ -2,7 +2,6 @@ const UNSPLASH_API_KEY = "Gu2n4WYUlx5onlhkP2AvCODE2KHAO7eNX2noQdq2Tk0";
 
 const OPTION_A_ID = "optionA";
 const OPTION_B_ID = "optionB";
-const backButton = document.getElementById("back-button");
 
 const OPTIONS = [{
         a: {
@@ -102,6 +101,7 @@ function handleFinalOption(isAnswerA) {
  addAnswer(isAnswerA);
  let quiz = document.getElementById("quiz");
  quiz.classList.add("hidden");
+ let backButton = document.getElementById("back-button");
  backButton.classList.add("hidden");
  getDestination(getIdsForRequest(answers));
 }

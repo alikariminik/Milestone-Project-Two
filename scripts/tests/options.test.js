@@ -97,6 +97,13 @@ describe("On clicking on an image, the option clicked is added to answers", () =
     });
 });
 
-    // test("Question 2: expects answers array to have a length of 1") , () => {
-    // mastertest.handleOptionClick();
-    // });
+describe("On reaching the final question, the handleFinalOption is called successfully", () => {
+    test("When Index equals 4", () => {
+        let index = 3;
+        let answers = [1,2,3,4];
+        const backButton = document.getElementById("back-button");
+        expect(answers).toHaveLength(4);
+        mastertest.handleFinalOption();
+        expect(document.getElementsByClassName("hidden").length).toBe(5);
+    });
+});
