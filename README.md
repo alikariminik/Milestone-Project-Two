@@ -177,7 +177,9 @@ Finally, it would have been nice to have included a button which would have imme
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ## Testing 
+During testing of my site, I incorporated both a Behavior Driven Development (BDD) and Test Driven Development (TDD). Through my continious BDD testing, I was able to identify issues with my site such as the UnsplashAPI "get random photo" problem as well as the problem with the planned "Previous Question" button that I have already alluded to above in this README.
 
+Evidence of TDD can be found [here.](scripts/tests/). The majority of my tests involved DOM manipulation and these actions are tested and evidenced in these files. Any errors identified by the tests were amended and then the tests repeated to achieve passing results.
 
 
 ### Validator Testing
@@ -200,6 +202,26 @@ Finally, it would have been nice to have included a button which would have imme
 
 ## Credits
 
+#### Resources 
+- Code Institute course material
+- Code Institute Mentor
+- [CodeInstitute-ReadME](https://github.com/Code-Institute-Solutions/SampleREADME)
+- Code Institute Tutor Support on Testing with JEST (Sean)
 
+#### Code
+- https://webdesign.tutsplus.com/articles/keyboard-accessibility-tips-using-html-and-css--cms-31966
+- https://stackoverflow.com/questions/27327765/how-to-get-a-img-tag-the-focus  
+- https://stackoverflow.com/questions/42034359/trigger-click-event-on-keypress-for-any-focused-element
+- https://stackoverflow.com/questions/14542062/eventlistener-enter-key
 
-python3 -m http.server
+The above sites were all really useful in helping make my website accessible and fully functional for keyboard only users.
+
+#### Media 
+- [Beaches] https://unsplash.com/photos/nYwfKdzB_Ds Edwards Lee
+- [Mountains] https://unsplash.com/photos/u5yopQOsFqg Guido de Sacco
+- [Adventures] https://unsplash.com/photos/kQu71SCrwns Edgar Laureano
+- [Relaxation] https://unsplash.com/photos/LmF4eBYs08c Jakayla Toney
+- [History] https://unsplash.com/photos/jNQK0RnwCSo Dries Augustyns
+- [Party] https://unsplash.com/photos/MxfcoxycH_Y Michael Discenza
+- [Culture] https://unsplash.com/photos/7k91OUDYAQ0 Ian Macharia
+- [Nature] https://unsplash.com/photos/dIMJcgCYZJw Eugene Deshko
