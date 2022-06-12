@@ -76,10 +76,10 @@ function updateOptionPhotos(index) {
     updateElementWithRandomPhoto(OPTIONS[index].b.searchQuery, OPTION_B_ID);
 }
 
-function updateQuestionText(index, id) {
+function updateQuestionText(index) {
     let nameA = OPTIONS[index].a.name;
     let nameB = OPTIONS[index].b.name;
-    document.getElementById(id).innerHTML = `<p class="quiz-question">${nameA} or ${nameB}?</p>`;
+    document.getElementById("question-generation-field").innerHTML = `<p class="quiz-question">${nameA} or ${nameB}?</p>`;
 }
 
 function addAnswer(isAnswerA) {

@@ -3,6 +3,7 @@
  */
 
 const { expect } = require("@jest/globals");
+const { reloadPage, initialiseImages, startQuiz } = require("./mastertest.js");
 
 let mastertest;
 
@@ -15,13 +16,16 @@ beforeEach( () => {
 
     mastertest = require('./mastertest.js');
 });
+
+
+
 //Testing removeIntroductionText//
 describe("DOM tests on button click which call removeIntroductionText function  first", () => {
     test("expects class=introduction to be removed from HTML", () => {
         mastertest.removeIntroductionText();
         expect(document.getElementsByClassName("introduction").length).toBe(0);
     });
-    test("expects 'Find My Dream Holiday' button to be removed from HTML", () => {
+    test("expects 'Find My Dream Holiday' button to be removed from HTML.", () => {
         mastertest.removeIntroductionText();
         expect(document.getElementsByTagName("button").length).toBe(0);
     });
@@ -37,9 +41,9 @@ describe("DOM tests on button click which call startQuiz function", () => {
         mastertest.startQuiz();
         expect(document.getElementsByClassName("introduction").length).toBe(0);
     });
-    test("expects 'Find My Dream Holiday' button to be removed from HTML", () => {
+    test("expects 'Find My Dream Holiday' button to be removed from HTML and the Home Button to be added so therefore there should be one button in the HTML", () => {
         mastertest.startQuiz();
-        expect(document.getElementsByTagName("button").length).toBe(0);
+        expect(document.getElementsByTagName("button").length).toBe(1);
     });
     test("expects the two img tags to have class=hidden to be removed from HTML. There are 4 instances of the hidden class so there should be 2 after this function is called", () => {
         mastertest.startQuiz();
