@@ -14,7 +14,7 @@ beforeEach( () => {
 });
 
 //Testing multiple functions//
-describe("Images and Question Text update appropriately", () => {
+describe("Question Text update appropriately for each question", () => {
     test("Question 1: expects option A question text to update to Beaches", () => {
         let index = 0;
         let nameA = mastertest.OPTIONS[index].a.name;
@@ -64,3 +64,39 @@ describe("Images and Question Text update appropriately", () => {
         expect(nameB).toEqual("Nature");
     });
 });
+
+describe("On clicking on an image, the option clicked is added to answers", () => {
+    test("Question 1: expects answers to equal an empty array", () => {
+        let index = 0;
+        let answers = [];
+        expect(answers).toEqual([]);
+    });
+    test("Question 1: expects answers array to be an array with a length equal to 1", () => {
+        let index = 0;
+        let answers = [];
+        mastertest.handleOptionClick(mastertest.addAnswer);
+        answers.push("test1");
+        expect(answers).toHaveLength(1);
+    });
+    test("Question 2: expects answers array to be an array with a length equal to 2", () => {
+        let index = 1;
+        let answers = [];
+        mastertest.handleOptionClick(mastertest.addAnswer);
+        answers.push("test1");
+        answers.push("test2");
+        expect(answers).toHaveLength(2);
+    });
+    test("Question 3: expects answers array to be an array with a length equal to 2", () => {
+        let index = 2;
+        let answers = [];
+        mastertest.handleOptionClick(mastertest.addAnswer);
+        answers.push("test1");
+        answers.push("test2");
+        answers.push("test3");
+        expect(answers).toHaveLength(3);
+    });
+});
+
+    // test("Question 2: expects answers array to have a length of 1") , () => {
+    // mastertest.handleOptionClick();
+    // });
