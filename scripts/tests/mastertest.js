@@ -481,4 +481,4 @@ var countryCodes = [
     "ZWE",
 ];
 
-module.exports = { removeIntroductionText };
+module.exports = { removeIntroductionText, startQuiz, initialiseImages, updateElementWithRandomPhoto };
