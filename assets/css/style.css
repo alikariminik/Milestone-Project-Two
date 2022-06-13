@@ -132,6 +132,14 @@
     background-color: #D9EBEC;
 }
 
+.messagestyling{
+    font-family: 'Lobster', sans-serif;
+    color: #355070;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
 .suggestion {
     color: #355070;
     font-size: 32px;

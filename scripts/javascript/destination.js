@@ -10,6 +10,11 @@ function getIdsForRequest(answers) {
 function displaySpinner(yes) {
     if (yes) {
         document.getElementById("spinner").classList.remove("hidden");
+        let loadingMessage = document.getElementById("loading-message");
+        loadingMessage.innerHTML = `<p>We're just finding your dream holiday destination.
+        It should only take a few seconds but if the loading icon persists past the point of you
+        having read this message, then 
+        please click the Home button and try again.</p>`;
     } else {
         document.getElementById("spinner").classList.add("hidden");
     }
@@ -33,6 +38,8 @@ function getDestination(ids) {
                     document.getElementById("destination-image").src =image.urls.regular;
                     displayDestination(location);
                     displaySpinner(false);
+                    let loadingMessage = document.getElementById("loading-message");
+                    loadingMessage.innerHTML = "";
                 });
             }
         })

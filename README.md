@@ -192,6 +192,18 @@ Evidence of TDD can be found [here.](scripts/tests/). The majority of my tests i
 * JSlint
   * No major errors were returned when passing through the official JSlint Validator. [JSlint Validator](https://www.jslint.com/)
 
+### Responsiveness
+
+Vigorous testing was conducted throughout the development process to ensure that the site maintained responsiveness as more elements were added on. Using developer tools and adjusting screen dimensions, I have checked to ensure that all content displays clearly over a varierty of screen sizes - primarily on the Mobile, Tablet and Monitors.
+
+
+### Known Bugs
+- There is one bug which I have not been able to resolve and this occurs usually when a user clicks through the options at a very quick pace. It results in the request for a holiday location not being fulfilled and the loading animation icon remains on the page spinning. I am not sure what causes this to occur but a possible solution to fixing this would be to utilise to a setTimeout() method to slow down the speed at which users can click on icons. As a way to keep the user informed of this and alert them off the error, I have implemented an error message which will display whilst the request is loading and then disappear once the request has successfully been made and the destination is displayed. 
+
+- Due to the issue with using Unsplash API get random image request as mentioned earlier in my README, the final image can sometimes display images which do not seem fitting to the resulting destination. This is not exactly a bug but more a drawback of utilising this API feature. 
+
+- The final image displayed sometimes extends outside of the box it is meant to sit in. 
+
 ## Deployment
 
 * The site was deployed to GitHub pages. The steps to deploy the site are as follows:
