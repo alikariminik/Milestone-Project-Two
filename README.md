@@ -62,7 +62,7 @@ Acceptance Criteria:
 * It should be clear that it is a site designed to identify a holiday destination.
 
 Implementation:
-* The website name, colour scheme font choice and introductory text all convey a to the user that this is a different and fun way of identifying the user's next holdiday destination. The  introductory text explains the purpose of the site in a clear and concise way and the focal point of the intitial page is the "Find my dream holiday!" button.
+* The website name, colour scheme font choice and introductory text all convey a to the user that this is a different and fun way of identifying the user's next holiday destination. The introductory text explains the purpose of the site in a clear and concise way and the focal point of the initial page is the "Find my dream holiday!" button.
 
 User Story:
 
@@ -72,7 +72,7 @@ Acceptance Criteria:
 * The start to the end of the application should be easily achieved in just a few clicks. 
 
 Implementation:
-* The end screen which displays a potential holiday destination can be achieved through just 5 clicks. The site is responsive to give visual feedback when an option can be clicked - either through the use of the cursor icon changing to a pointer for the buttons and clicable images as well as the buttons changing colours on hover. Home button allows for an easy restart of the application.
+* The end screen which displays a potential holiday destination can be achieved through just 5 clicks. The site is responsive to give visual feedback when an option can be clicked - either through the use of the cursor icon changing to a pointer for the buttons and clickable images as well as the buttons changing colours on hover. Home button allows for an easy restart of the application.
 
 User Story:
 
@@ -82,7 +82,7 @@ Acceptance Criteria:
 * It should be entirely possible for an individual utilising a keyboard only to be able to click "Find my dream holiday!" button, home button and select on option a or option b image.
 
 Implementation:
-* The user will be able to navigate the site using only a keyboard. All buttons and images can be selected utlising both mouse clicks and "keydown" enter.
+* The user will be able to navigate the site using only a keyboard. All buttons and images can be selected utilising both mouse clicks and "keydown" enter.
 
 User Story:
 
@@ -96,7 +96,7 @@ Implementation:
 
 
 ### The Skeleton Plane
-#### Wireframe Mockups 
+#### Wireframe Mock-ups 
 I utilised Balsamiq to produce my wireframes of how the app would appear across different devices. The app was intended to be contained within one page, however as the app required different content to be loaded at different times, the wireframes display a combination of different views of the site, with the introductory view and images seen in one and then the final page view adjacent to it.
 
 Mobile Device Wireframes 
@@ -125,35 +125,35 @@ For the introductory text, I used the 'Merriweather Sans' font in italics with '
 
 'Lobstr' was used again for the style of the questions asked. This in conjunction with the ever-present 'Merriweather Sans' Fly Me To logo allows the user to connect the logo and the subsequent questions together so that the page reads as follows: "Fly Me to 'Beaches or Mountains'?, "Fly Me to 'Adventures or Relaxation'?" etc. 
 
-Finally, for the exact same reasoning as before, 'Lobstr' was used again for the style of the suggested destination location eg. "Fly Me to Paris, France?. 
+Finally, for the exact same reasoning as before, 'Lobstr' was used again for the style of the suggested destination location e.g. "Fly Me to Paris, France?. 
 
 [Google Fonts](https://fonts.google.com/)
 
 ##### Imagery
-The use of imagers is fundamental to the design of this site. I envisioned early on during this process that I wanted the questions asked to the user to be supported by a relevant image so it was very useful of my CodeInstitute tudor to recommend me to use the Unsplash API. After reading the documentation and registering with the site to obtain my own secret key, I got to work with implementing the API into my application. 
+The use of imagers is fundamental to the design of this site. I envisioned early on during this process that I wanted the questions asked to the user to be supported by a relevant image so it was very useful of my CodeInstitute tutor to recommend me to use the Unsplash API. After reading the documentation and registering with the site to obtain my own secret key, I got to work with implementing the API into my application. 
 
-Orignally, I had set it so that a random image was requested each time the application is utilied. This is so that users were provided with a new image of "Beaches" or "Mountains" each time they answered the questions. However, during development I found that utilising the random image request was too unreliable as sometimes the images fetched were completely irrelevant to the question. For example, I found that when the beaches image was requested, sometimes an image of an Eagle would be fetched. This same issue was present for all the answer options and in order to rectify this, I changed my code so that the API was always requesting the same image on each run through. This was not ideal as I wanted the application to feel fresh still on each use but I felt as though using the same image achieved better results than running the risk of getting a completely irrelevant image. 
+Originally, I had set it so that a random image was requested each time the application is utilised. This is so that users were provided with a new image of "Beaches" or "Mountains" each time they answered the questions. However, during development I found that utilising the random image request was too unreliable as sometimes the images fetched were completely irrelevant to the question. For example, I found that when the beaches image was requested, sometimes an image of an Eagle would be fetched. This same issue was present for all the answer options and in order to rectify this, I changed my code so that the API was always requesting the same image on each run through. This was not ideal as I wanted the application to feel fresh still on each use but I felt as though using the same image achieved better results than running the risk of getting a completely irrelevant image. 
 
 ## Features
 ### Unsplash API
-As mentioned previously, the Unsplash API was suggested to me by my CodeInstitute tutor after I outlined what I had envisioned for this project. I looked into the documentation of the Unsplash API and it seemed to be exactly what I was needing for my planned projects. Again, as previously mentioned, when using the get random image request, inconsistent results were acheieved and even after tweaking the search query to be more specific, unrelated images were still returned which I viewed to be too problematic to retain in this application so I opted for the requesting the same image for each answer option. 
+As mentioned previously, the Unsplash API was suggested to me by my CodeInstitute tutor after I outlined what I had envisioned for this project. I looked into the documentation of the Unsplash API and it seemed to be exactly what I was needing for my planned projects. Again, as previously mentioned, when using the get random image request, inconsistent results were achieved and even after tweaking the search query to be more specific, unrelated images were still returned which I viewed to be too problematic to retain in this application so I opted for the requesting the same image for each answer option. 
 
 Perhaps in the future, if I had more time, I would explore other similar APIs (such as Pexels API) and test to see whether a random image request could have achieved what I was hoping for originally with the Unsplash API.
 
 [UnsplashAPI](https://unsplash.com/documentation)
 
 ### TomTom API
-After searching the web for travel and tourism APIs which had the functionality to return a place in the world based of certain factors, I came across the TomTom API which after reading the documentation seemed like a very good fit for what I wanted the API to achieve. My goal for this API was for the user to answer the questions with their preference i.e. Beaches or Mountains and then a request would be sent to the TomTom API which would fetch a result in way of a place in the world which met most if not all the chosen preferneces. 
+After searching the web for travel and tourism APIs which had the functionality to return a place in the world based of certain factors, I came across the TomTom API which after reading the documentation seemed like a very good fit for what I wanted the API to achieve. My goal for this API was for the user to answer the questions with their preference i.e. Beaches or Mountains and then a request would be sent to the TomTom API which would fetch a result in way of a place in the world which met most if not all the chosen preferences. 
 
-However, after some iniital tests, it was made clear to me that there were indeed some drawbacks to this API which would mean that getting the exact use out of it that I wanted would not be so simple. 
+However, after some initial tests, it was made clear to me that there were indeed some drawbacks to this API which would mean that getting the exact use out of it that I wanted would not be so simple. 
 
-Firstly, given that I wanted the API to return a destination based of certain preferneces meant I needed to read through the API's assigned ID categories. This very long list of different points of interests can be viewed in Assets/TomTomAPI/TomTomIDCategories. I read through all of these categories and took a note of the relevant ID for those which seemed like they fitted the answer option categories. For example, for the option "Beaches", I noted the IDs "9357" and "9937002" which correspond to Beach and Beach Clubs, respectively, around the world. Therefore, if a user selects Beach as an option, these two IDs will be included in the request to the API to return a locaiton in the world. Full details of the categories and their IDs can be viewed within the Object named OPTIONS on rows 7 - 59 in Options.JS.
+Firstly, given that I wanted the API to return a destination based of certain preferences meant I needed to read through the API's assigned ID categories. This very long list of different points of interests can be viewed in Assets/TomTomAPI/TomTomIDCategories. I read through all of these categories and took a note of the relevant ID for those which seemed like they fitted the answer option categories. For example, for the option "Beaches", I noted the IDs "9357" and "9937002" which correspond to Beach and Beach Clubs, respectively, around the world. Therefore, if a user selects Beach as an option, these two IDs will be included in the request to the API to return a location in the world. Full details of the categories and their IDs can be viewed within the Object named OPTIONS on rows 7 - 59 in Options.JS.
 
 An issue I came across when testing first testing sending off the request to the Tom Tom API was that you could only include 10 IDs within each request. This was disappointing as I had hoped for each preference to be considered in each request. However, as a work around to this and to keep this project idea alive, I opted to randomly select 10 IDs, that would be logged to the Answers Array after each User's option was selected, and send those off to the API. The downsides to this were that some of the user's preferences will not have been considered as they would have been selected. 
 
-Additionally, another downside to the API was that there was no way that I could find for the API to return a destination / location which met all of the IDs requested. As far as I am aware, the API returns a destinaition which matches at least of the IDs. This again was disappointing but I felt as though for the purpose of this project this was acceptable as long as the API requests were returning a different destination which at least met some of the individual's holiday criteria. 
+Additionally, another downside to the API was that there was no way that I could find for the API to return a destination / location which met all of the IDs requested. As far as I am aware, the API returns a destination which matches at least of the IDs. This again was disappointing but I felt as though for the purpose of this project this was acceptable as long as the API requests were returning a different destination which at least met some of the individual's holiday criteria. 
 
-An additional problem I came across when testing this API was that the results were always returned in alphabetical order of the country name and further to this, only 100 results can be returned on each request. This meant that during initial testing, I would often find that my application was suggesting I go to Andora or United Arab Emirates due to the two countries Country Codes beginning with "A". This was problematic but my soloution to ensuring that the application returned a different country and place was to add country code paramters to the request. In order to not discriminate against any country, I made programmed the request to utilise 10 random country codes within the request each time. A full list of the country codes can be found in [data.js]scripts/javascript/data.js. Although this was not ideal, I did think it was an appropriate work around and it meant that a user was always bound to be suggested a holiday destination based of at least one of their preferences. 
+An additional problem I came across when testing this API was that the results were always returned in alphabetical order of the country name and further to this, only 100 results can be returned on each request. This meant that during initial testing, I would often find that my application was suggesting I go to Andora or United Arab Emirates due to the two countries Country Codes beginning with "A". This was problematic but my solution to ensuring that the application returned a different country and place was to add country code parameters to the request. In order to not discriminate against any country, I made programmed the request to utilise 10 random country codes within the request each time. A full list of the country codes can be found in [data.js]scripts/javascript/data.js. Although this was not ideal, I did think it was an appropriate work around and it meant that a user was always bound to be suggested a holiday destination based of at least one of their preferences. 
 
 All in all, the Tom Tom API was great to work with despite its limitations and called on me to be creative and adaptive with my design in order to get the most out of it.
 
@@ -162,13 +162,13 @@ All in all, the Tom Tom API was great to work with despite its limitations and c
 [TomTomAPI|PlacebyID](https://developer.tomtom.com/search-api/documentation/place-by-id-service/place-by-id#request-parameters)
 
 ### Planned / Scrapped Features
-I had further ideas for additional features for this applicaiton but due to different reasons, these were either not pursued or scrapped during implementation and testing.
+I had further ideas for additional features for this application but due to different reasons, these were either not pursued or scrapped during implementation and testing.
 
-The first of which was my plans to implement an additional API which was capable of displaying current avergae flight prices to the suggested destination. This would have shown on the page along side where the suggested location is displayed. I looked at several travel APIs which appeared to support this feature. The first of which was the SkyScanner API. Unfortunately, this was not free and you need to be an affiliate of Skyscanner to utilise the API. The next was Google Flights, but unforuntately this was shut down in 2018. I also looked into Kayak, TripAdvisor and Expedia APIs but again these were either too complicated for me or locked behind paywalls again. So after spending a signifcant period of time on this research, I abandoned this feature. 
+The first of which was my plans to implement an additional API which was capable of displaying current average flight prices to the suggested destination. This would have shown on the page alongside where the suggested location is displayed. I looked at several travel APIs which appeared to support this feature. The first of which was the SkyScanner API. Unfortunately, this was not free and you need to be an affiliate of Skyscanner to utilise the API. The next was Google Flights, but unfortunately this was shut down in 2018. I also looked into Kayak, TripAdvisor and Expedia APIs but again these were either too complicated for me or locked behind paywalls again. So after spending a significant period of time on this research, I abandoned this feature. 
 
-In addition to an additional API, I also wanted to incorporate a "Previous Question Button" which would take the usuer back to the previous question asked and also remove the user's answer for that question from the Answers array. However, after initial set up, the answers were not being removed from the Answers array and there was an issue which would result in the "Previous Question Button" disappearing and not re-appearing if the user went back to the initial question and then moved to the second question. After consultation with my CodeInstitute Tutor, it was agreed that due to time constraints, this feature would be scrapped as it was not essential to the overall functionality of the project. 
+In addition to an additional API, I also wanted to incorporate a "Previous Question Button" which would take the user back to the previous question asked and also remove the user's answer for that question from the Answers array. However, after initial set up, the answers were not being removed from the Answers array and there was an issue which would result in the "Previous Question Button" disappearing and not re-appearing if the user went back to the initial question and then moved to the second question. After consultation with my CodeInstitute Tutor, it was agreed that due to time constraints, this feature would be scrapped as it was not essential to the overall functionality of the project. 
 
-Finally, it would have been nice to have included a button which would have immediately returned another random destination after one had already been suggested in order to avoid the user having to re-complete the questionaire. If I looked to expand on this project in the future, this and the other removed / scrapped features alluded to above would be on my list of additions. 
+Finally, it would have been nice to have included a button which would have immediately returned another random destination after one had already been suggested in order to avoid the user having to re-complete the questionnaire. If I looked to expand on this project in the future, this and the other removed / scrapped features alluded to above would be on my list of additions. 
 
 ### Languages Used
 
@@ -177,7 +177,7 @@ Finally, it would have been nice to have included a button which would have imme
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ## Testing 
-During testing of my site, I incorporated both a Behavior Driven Development (BDD) and Test Driven Development (TDD). Through my continious BDD testing, I was able to identify issues with my site such as the UnsplashAPI "get random photo" problem as well as the problem with the planned "Previous Question" button that I have already alluded to above in this README. A further issue I have encountered through BDD testing, is that sometimes if the User clicks through the options at very quick pace, the request to the TomTomAPI fails to execute correctly which results in an infinite loading screen icon. Details of this are covered below under Known Bugs.
+During testing of my site, I incorporated both a Behaviour Driven Development (BDD) and Test Driven Development (TDD). Through my continuous BDD testing, I was able to identify issues with my site such as the UnsplashAPI "get random photo" problem as well as the problem with the planned "Previous Question" button that I have already alluded to above in this README. A further issue I have encountered through BDD testing, is that sometimes if the User clicks through the options at very quick pace, the request to the TomTomAPI fails to execute correctly which results in an infinite loading screen icon. Details of this are covered below under Known Bugs.
 
 Evidence of TDD can be found [here.](scripts/tests/). The majority of my tests involved DOM manipulation and these actions are tested and evidenced in these files. Any errors identified by the tests were amended and then the tests repeated to achieve passing results.
 
@@ -194,7 +194,7 @@ Evidence of TDD can be found [here.](scripts/tests/). The majority of my tests i
 
 ### Responsiveness
 
-Vigorous testing was conducted throughout the development process to ensure that the site maintained responsiveness as more elements were added on. Using developer tools and adjusting screen dimensions, I have checked to ensure that all content displays clearly over a varierty of screen sizes - primarily on the Mobile, Tablet and Monitors.
+Vigorous testing was conducted throughout the development process to ensure that the site maintained responsiveness as more elements were added on. Using developer tools and adjusting screen dimensions, I have checked to ensure that all content displays clearly over a variety  of screen sizes - primarily on the Mobile, Tablet and Monitors.
 
 
 ### Known Bugs
