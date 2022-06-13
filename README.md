@@ -177,7 +177,7 @@ Finally, it would have been nice to have included a button which would have imme
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ## Testing 
-During testing of my site, I incorporated both a Behavior Driven Development (BDD) and Test Driven Development (TDD). Through my continious BDD testing, I was able to identify issues with my site such as the UnsplashAPI "get random photo" problem as well as the problem with the planned "Previous Question" button that I have already alluded to above in this README.
+During testing of my site, I incorporated both a Behavior Driven Development (BDD) and Test Driven Development (TDD). Through my continious BDD testing, I was able to identify issues with my site such as the UnsplashAPI "get random photo" problem as well as the problem with the planned "Previous Question" button that I have already alluded to above in this README. A further issue I have encountered through BDD testing, is that sometimes if the User clicks through the options at very quick pace, the request to the TomTomAPI fails to execute correctly which results in an infinite loading screen icon. Details of this are covered below under Known Bugs.
 
 Evidence of TDD can be found [here.](scripts/tests/). The majority of my tests involved DOM manipulation and these actions are tested and evidenced in these files. Any errors identified by the tests were amended and then the tests repeated to achieve passing results.
 
